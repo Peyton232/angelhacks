@@ -87,7 +87,7 @@ class _State extends State<MyApp> {
                 child: Text('Other'),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SuggestionPage()));
+                      MaterialPageRoute(builder: (context) => OtherHomePage()));
                 },
               ),
             ],
