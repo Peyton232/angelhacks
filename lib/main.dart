@@ -7,6 +7,8 @@ import 'pages/otherPages/otherHomePage.dart';
 import 'pages/techPages/techHomePage.dart';
 import 'pages/suggestion.dart';
 
+import 'pages/financePages/creditcardPage.dart';
+
 void main() {
   runApp(new MaterialApp(
     home: new MyApp(),
