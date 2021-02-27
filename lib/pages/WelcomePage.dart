@@ -45,7 +45,7 @@ class WelcomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             left: -150,
-            bottom: -45.0,
+            bottom: -45,
             height: kHouseDimensions,
             width: kHouseDimensions,
             child: Icon(

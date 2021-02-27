@@ -1,6 +1,7 @@
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
+import 'creditcardPage.dart';
 
 class FinanceHomePage extends StatelessWidget {
   @override
@@ -27,6 +28,19 @@ class FinanceHomePage extends StatelessWidget {
               size: 500,
               color: Colors.green,
             ),
+ //       body: Container(
+   //       child: Column(
+     //       mainAxisAlignment: MainAxisAlignment.center,
+       //     children: <Widget>[
+         //     Center(
+           //       child: FlatButton(
+             //       child: Text('Navigate to Credit Card'),
+               //     onPressed: () {
+                 //     Navigator.push(context,
+                   //       MaterialPageRoute(builder: (context) => CreditCardPage()));
+                  //  },
+                 // ))
+           // ],
           ),
           BlurBackground(),
           GestureDetector(
