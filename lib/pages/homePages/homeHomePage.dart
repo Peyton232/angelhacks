@@ -70,9 +70,26 @@ class _homeHomepageState extends State<homeHomepage> {
   }
 }
 
-
-
-
-
-
-// Not done with this on this page : https://github.com/AppDevOrgUNT/mychef_revised/blob/master/lib/AppPages/recipePage.dart
+class HomeHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('homely home'),
+        ),
+        body: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                  child: FlatButton(
+                    child: Text('Navigate to Page One'),
+                    onPressed: () {
+                      // Navigation code here
+                    },
+                  ))
+            ],
+          ),
+        ));
+  }
+}
