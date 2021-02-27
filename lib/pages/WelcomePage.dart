@@ -10,6 +10,7 @@ import 'package:angelhacks/data/constants.dart';
 import 'package:angelhacks/customWidgets/CustomCard.dart';
 import 'package:angelhacks/customWidgets/DailyTipCard.dart';
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
+import 'package:angelhacks/customWidgets/DrawerItems.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -17,56 +18,42 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       drawer: Theme(
-                data: Theme.of(context).copyWith(
-              canvasColor: Colors.blue,
-            ),
-          child: Drawer(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Container (
-              color: Colors.blue,
-              child: new Column(
-                  children: <Widget>[
-                    Center(
-                      child: GestureDetector(
-                        onTap: () {print("Favorites print");},
-                        child: Container(
-                          padding: EdgeInsets.all(16),
-                          child: Text("Favorites", style: TextStyle(fontSize: 20),),
-                        ),
-                      ),
-                    ),
-                    Center(
-                      child: GestureDetector(
-                        onTap: () {print("Notifications Print");},
-                        child: Container(
-                          padding: EdgeInsets.all(16),
-                          child: Text("Notifications", style: TextStyle(fontSize: 20),),
-                        ),
-                      ),
-                    ),
-                    Center(
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SettingsScreen(),
-                          ),
-                        );},
-                        child: Container(
-                          padding: EdgeInsets.all(16),
-                          child: Text("Settings", style: TextStyle(fontSize: 20),),
-                        ),
-                      ),
-                    ),
-                  ]
-              ),
-            )
-          ],
+        data: Theme.of(context).copyWith(
+          canvasColor: Colors.deepPurple,
         ),
-      ),
+        child: Drawer(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                //color: Colors.deepPurple,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    DrawerItems(
+                      drawerName: "Favorites",
+                      drawerItemTapped: () {
+                        print("Favorites tapped");
+                      },
+                    ),
+                    DrawerItems(
+                      drawerName: "Notifications",
+                      drawerItemTapped: () {
+                        print("Notifications tapped");
+                      },
+                    ),
+                    DrawerItems(
+                      drawerName: "Settings",
+                      drawerItemTapped: () {
+                        print("Settings tapped");
+                      },
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ),
       appBar: AppBar(
         elevation: 0.0,
@@ -86,7 +73,6 @@ class WelcomePage extends StatelessWidget {
           style: kAppBarTextStyle,
         ),
       ),
-
       backgroundColor: Colors.black,
       body: Stack(
         children: <Widget>[

@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
 
-class car extends StatelessWidget{
-
-   var Title = "Car";
-   var Fin_List = ["Car dashboard symbols", "How to change a tire", "How to change wipers", "Change Oil", "Tire Pressure", "Jumpstart a car", "Deal with a crash"];
+class car extends StatelessWidget {
+  var Title = "Car";
+  var Fin_List = [
+    "Car dashboard symbols",
+    "How to change a tire",
+    "How to change wipers",
+    "Change Oil",
+    "Tire Pressure",
+    "Jumpstart a car",
+    "Deal with a crash"
+  ];
   //var stepList = new List(20);
-   var stepList = ["Car dashboard symbols", "How to change a tire", "How to change wipers", "Change Oil", "Tire Pressure", "Jumpstart a car", "Deal with a crash"];
-   String paragraph = "paragraph time yeah";
+  var stepList = [
+    "Car dashboard symbols",
+    "How to change a tire",
+    "How to change wipers",
+    "Change Oil",
+    "Tire Pressure",
+    "Jumpstart a car",
+    "Deal with a crash"
+  ];
+  String paragraph = "paragraph time yeah";
   var icon;
   String image;
-
-
 
   @override
   Widget build(BuildContext context) {

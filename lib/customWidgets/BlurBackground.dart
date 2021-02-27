@@ -25,7 +25,7 @@ class BlurBackground extends StatelessWidget {
           color: Colors.black.withOpacity(0.4),
           gradient: LinearGradient(
             begin: Alignment.topCenter,
-            end: Alignment(0.8, 0.3),
+            end: Alignment(0.0, 0.0),
             colors: [
               gradientColor,
               Colors.black,
