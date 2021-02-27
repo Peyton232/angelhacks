@@ -2,7 +2,7 @@
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
-import 'package:angelhacks/customWidgets/ListOfAutoTipCards.dart';
+import 'ListOfCarTipCards.dart';
 
 class CarHomePage extends StatelessWidget {
   @override
@@ -34,7 +34,7 @@ class CarHomePage extends StatelessWidget {
           BlurBackground(
             gradientColor: Colors.red,
           ),
-          ListOfAutoTipCards(),
+          ListOfCarTipCards(),
         ],
       ),
     );

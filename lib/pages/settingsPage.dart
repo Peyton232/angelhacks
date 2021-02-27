@@ -33,12 +33,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ],
         ),
         SettingsSection(
-          title: 'Account',
-          tiles: [
-            SettingsTile(title: 'Email', leading: Icon(Icons.email)),
-          ],
-        ),
-        SettingsSection(
           title: 'Security',
           tiles: [
             SettingsTile.switchTile(

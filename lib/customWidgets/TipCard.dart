@@ -4,12 +4,12 @@ import 'dart:ui';
 
 class TipCard extends StatelessWidget {
   final String topicTitle;
-  final String topicDescription;
+  //final String topicDescription;
   final Image topicImage;
 
   TipCard({
     this.topicTitle,
-    this.topicDescription,
+    //this.topicDescription,
     this.topicImage,
   });
 
@@ -88,16 +88,16 @@ class TipCard extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          topicDescription,
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            color: Colors.white,
-                          ),
-                        ),
+                        // SizedBox(
+                        //   height: 5,
+                        // ),
+                        // Text(
+                        //   topicDescription,
+                        //   style: TextStyle(
+                        //     fontSize: 15.0,
+                        //     color: Colors.white,
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
