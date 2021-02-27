@@ -12,6 +12,6 @@ const kCardTextStyle = TextStyle(
   color: Colors.white,
   fontSize: 17,
 );
-const kBackgroundBlurAmount = 0.0;
+const kBackgroundBlurAmount = 3.0;
 const kCardBlurAmount = 7.0;
 const kDistanceFromAppBar = 130.0;
