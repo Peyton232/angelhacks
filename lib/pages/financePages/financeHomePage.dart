@@ -7,6 +7,7 @@ class FinanceHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -20,7 +21,7 @@ class FinanceHomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             right: -150,
-            //bottom: 0.0,
+            bottom: 0.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
             child: Icon(
@@ -29,7 +30,9 @@ class FinanceHomePage extends StatelessWidget {
               color: Colors.green,
             ),
           ),
-          BlurBackground(),
+          BlurBackground(
+            gradientColor: Colors.green,
+          ),
           GestureDetector(
             onTap: () {
               print("SubCard");
@@ -51,7 +54,7 @@ class FinanceHomePage extends StatelessWidget {
             },
             child: Container(
               margin: EdgeInsets.only(
-                top: 20.0,
+                top: kDistanceFromAppBar,
                 left: 30.0,
                 right: 30.0,
               ),

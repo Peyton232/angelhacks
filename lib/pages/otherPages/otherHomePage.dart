@@ -6,6 +6,7 @@ class OtherHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -19,7 +20,7 @@ class OtherHomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             bottom: -90,
-            right: -90.0,
+            right: 70.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
             child: Icon(
@@ -28,7 +29,9 @@ class OtherHomePage extends StatelessWidget {
               color: Colors.deepPurple,
             ),
           ),
-          BlurBackground(),
+          BlurBackground(
+            gradientColor: Colors.deepPurple,
+          ),
           GestureDetector(
             onTap: () {
               print("SubCard");
@@ -50,7 +53,7 @@ class OtherHomePage extends StatelessWidget {
             },
             child: Container(
               margin: EdgeInsets.only(
-                top: 20.0,
+                top: kDistanceFromAppBar,
                 left: 30.0,
                 right: 30.0,
               ),

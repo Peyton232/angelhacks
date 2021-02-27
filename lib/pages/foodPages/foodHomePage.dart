@@ -6,6 +6,7 @@ class FoodHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -19,7 +20,7 @@ class FoodHomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             right: 50.0,
-            bottom: 100.0,
+            bottom: 0.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
             child: Icon(
@@ -28,7 +29,9 @@ class FoodHomePage extends StatelessWidget {
               color: Colors.yellow,
             ),
           ),
-          BlurBackground(),
+          BlurBackground(
+            gradientColor: Colors.yellow,
+          ),
           GestureDetector(
             onTap: () {
               print("SubCard");
@@ -50,13 +53,17 @@ class FoodHomePage extends StatelessWidget {
             },
             child: Container(
               margin: EdgeInsets.only(
-                top: 20.0,
+                top: kDistanceFromAppBar,
                 left: 30.0,
                 right: 30.0,
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
                 color: kCardColor,
+                border: Border.all(
+                  width: 1,
+                  color: Colors.white.withOpacity(0.2),
+                ),
               ),
               height: 100,
               child: Row(
