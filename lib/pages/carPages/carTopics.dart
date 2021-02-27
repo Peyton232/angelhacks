@@ -16,7 +16,7 @@ final List<Topics> carTopics = [
   Topics(
     topicTitle: "Car Dashboard Symbols",
     //topicDescription: "Meaning of dashboard symbols",
-      topicImage: Image.asset("images/wipers.jpg", fit: BoxFit.fill,),
+      topicImage: Image.asset("images/dashBoard.jpeg", fit: BoxFit.fill,),
   ),
   Topics(
     topicTitle: "Change a Tire",
@@ -41,7 +41,7 @@ final List<Topics> carTopics = [
   Topics(
     topicTitle: "Jumpstart Car",
     //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/wipers.jpg", fit: BoxFit.fill,),
+    topicImage: Image.asset("images/How-to-Jump-Start-a-Car.jpg", fit: BoxFit.fill,),
   ),
   Topics(
     topicTitle: "Crash",

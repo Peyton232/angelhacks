@@ -24,7 +24,7 @@ final List<Topics> foodTopics = [
   Topics(
     topicTitle: "Sharpen a knife",
     //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/knifeRack.jpg", fit: BoxFit.fill,),  ),
+    topicImage: Image.asset("images/SharpenKnife.jpeg", fit: BoxFit.fill,),  ),
   Topics(
     topicTitle: "Prep Meals",
     //topicDescription: "Type of gas, etc",
