@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
 import 'dart:ui';
+import 'tutorialPageLayout.dart';
 
 class TipCard extends StatelessWidget {
   final String topicTitle;
@@ -18,20 +19,17 @@ class TipCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         print("SubCard");
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => RecipeSubPage(
-        //       name: name,
-        //       image: image,
-        //       meal: meal,
-        //       diet: diet,
-        //       cuisine: cuisine,
-        //       difficulty: difficulty,
-        //       time: time,
-        //     ),
-        //   ),
-        // );
+         Navigator.push(
+           context,
+           MaterialPageRoute(
+             builder: (context) => TutorialSubPage(
+               Title: "Car",
+               //image: 'images/homeicon.png',
+               Paragraph: 'Hello I am a paragraph',
+               steps:  ["1", '2', '3'],
+            ),
+           ),
+         );
         //this should pass the info of that specific topic using the
       },
       child: ClipRRect(

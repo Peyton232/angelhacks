@@ -1,40 +1,86 @@
-import 'package:angelhacks/data/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../classes/car.dart';
-import 'temp.dart';
 
-class tutorialPageLayout extends StatelessWidget {
-  car data;
+class TutorialSubPage extends StatelessWidget {
+  final String Title;
+  final Image image;
+  final String Paragraph;
+  final List steps;
+
+  TutorialSubPage({
+    @required this.Title,
+    this.image,
+    this.Paragraph,
+    this.steps,
+  });
+
+  @override
   Widget build(BuildContext context) {
-    Container(
-      padding: EdgeInsets.all(12.0),
-      alignment: Alignment.center,
-      child: Column(
-        children: <Widget>[
-          Container(
-            height: 54.0,
-            padding: EdgeInsets.all(12.0),
-            child: Column(
-              children: <Widget>[
-                //REORGANIZE THESE AND MAKE THEM PRETTY--------------------------------------------------
-                Text(
-                  data.Title,
-                  style: TextStyle(fontWeight: FontWeight.bold),
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            //image,
+            Container(
+              height: 130.0,
+              //color: kLimeColor,
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 50.0,
                 ),
-                Text(
-                  data.paragraph,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      '$Title',
+                      //style: kSubPageRecipeNameTextStyle,
+                    ),
+                    Text(
+                      '$Paragraph',
+                      //style: kSubPageRecipeSubTextStyle,
+                    ),
+                    Row(
+                      children: <Widget>[
+                      ],
+                    ),
+                  ],
                 ),
-               Image(
-                   image: AssetImage(data.image),
-               ),
-
-                Text("Steps"),
-                for(var item in data.stepList ) Text(item + "\n"),
-
-              ],
+              ),
             ),
-          ),
-        ],
+            Container(
+              margin: EdgeInsets.only(
+                left: 20.0,
+                top: 20.0,
+              ),
+              height: 300.0,
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                left: 20.0,
+                top: 20.0,
+              ),
+              height: 300.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Text(
+                    'Steps',
+                    //style: kCategoryLabelTextStyle,
+                    textAlign: TextAlign.left,
+                  ),
+                  for(var item in steps ) Text(item + "\n"),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
