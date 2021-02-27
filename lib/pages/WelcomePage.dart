@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -31,27 +33,34 @@ class WelcomePage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
-            left: -100,
-            bottom: 0.0,
+            left: -150,
+            //bottom: 0.0,
             height: kHomeBackgroundDimensions,
             width: kHomeBackgroundDimensions,
             child: Image.asset("images/homeIcon.png"),
           ),
           Column(
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  CustomCard(
-                    cardName: "Home",
-                  ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  CustomCard(
-                    cardName: "Finance",
-                  ),
-                ],
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 30.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CustomCard(
+                      cardName: "Home",
+                      cardIcon: Icons.home,
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    CustomCard(
+                      cardName: "Finance",
+                      cardIcon: Icons.monetization_on,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -72,22 +81,34 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: kCardDimensions,
-      width: kCardDimensions,
-      decoration: BoxDecoration(
-        color: kCardColor,
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Icon(
-            Icons.home,
-            size: 80.0,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(15.0),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(
+          sigmaX: 10,
+          sigmaY: 10,
+        ),
+        child: Container(
+          height: kCardDimensions,
+          width: kCardDimensions,
+          decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(15.0),
+              border: Border.all(
+                width: 1.5,
+                color: Colors.white.withOpacity(0.2),
+              )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                cardIcon,
+                size: 80.0,
+              ),
+              Text(cardName),
+            ],
           ),
-          Text(cardName),
-        ],
+        ),
       ),
     );
   }
