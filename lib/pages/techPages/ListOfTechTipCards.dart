@@ -14,7 +14,7 @@ class ListOfTechTipCards extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return TipCard(
             topicTitle: techTopics[index].topicTitle,
-            topicDescription: techTopics[index].topicDescription,
+            //topicDescription: techTopics[index].topicDescription,
             topicImage: techTopics[index].topicImage,
           );
         },

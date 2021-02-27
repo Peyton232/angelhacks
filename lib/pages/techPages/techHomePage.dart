@@ -1,5 +1,5 @@
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
-import 'package:angelhacks/customWidgets/ListOfTechTipCards.dart';
+import 'file:///C:/Users/noble/AndroidStudioProjects/angelHacks/angelhacks/lib/pages/techPages/ListOfTechTipCards.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
 
