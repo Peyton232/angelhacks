@@ -21,8 +21,8 @@ class CustomCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
         child: BackdropFilter(
           filter: ImageFilter.blur(
-            sigmaX: kBlurAmount,
-            sigmaY: kBlurAmount,
+            sigmaX: kCardBlurAmount,
+            sigmaY: kCardBlurAmount,
           ),
           child: Container(
             height: kCardDimensions,
@@ -30,10 +30,10 @@ class CustomCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: kCardColor,
               borderRadius: BorderRadius.circular(15.0),
-              // border: Border.all(
-              //   width: 1.5,
-              //   color: Colors.white.withOpacity(0.2),
-              // ),
+              border: Border.all(
+                width: 1,
+                color: Colors.white.withOpacity(0.2),
+              ),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
