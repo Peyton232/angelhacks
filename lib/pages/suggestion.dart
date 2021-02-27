@@ -59,6 +59,12 @@ class _SuggestionPage extends State<SuggestionPage> {
       home: Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
           title: Text('Plugin example app'),
           actions: <Widget>[
             IconButton(
