@@ -44,7 +44,7 @@ class WelcomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             left: -150,
-            bottom: -45.0,
+            bottom: -45,
             height: kHouseDimensions,
             width: kHouseDimensions,
             child: Image.asset("images/homeIcon.png"),
@@ -56,131 +56,133 @@ class WelcomePage extends StatelessWidget {
               sigmaX: kBlurAmount,
             ),
             child: Container(
-              height: 950.0,
+              height: 10000,
               width: 430.0,
               color: Colors.black.withOpacity(0.4),
             ),
           ),
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(
-                  top: 130.0,
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: 130.0,
+                  ),
+                  child: DailyTipCard(),
                 ),
-                child: DailyTipCard(),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: kDistanceBetweenCards,
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: kDistanceBetweenCards,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CustomCard(
+                        cardName: "Home",
+                        cardIcon: Icons.home,
+                        cardTapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeHomePage(),
+                            ),
+                          );
+                        },
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      CustomCard(
+                        cardName: "Finance",
+                        cardIcon: Icons.monetization_on,
+                        cardTapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FinanceHomePage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CustomCard(
-                      cardName: "Home",
-                      cardIcon: Icons.home,
-                      cardTapped: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeHomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                    SizedBox(
-                      width: 46,
-                    ),
-                    CustomCard(
-                      cardName: "Finance",
-                      cardIcon: Icons.monetization_on,
-                      cardTapped: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => FinanceHomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: kDistanceBetweenCards,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CustomCard(
+                        cardName: "Automotive",
+                        cardIcon: Icons.directions_car,
+                        cardTapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CarHomePage(),
+                            ),
+                          );
+                        },
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      CustomCard(
+                        cardName: "Food",
+                        cardIcon: Icons.shopping_cart,
+                        cardTapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FoodHomePage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: kDistanceBetweenCards,
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: kDistanceBetweenCards,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CustomCard(
+                        cardName: "Internet",
+                        cardIcon: Icons.wifi,
+                        cardTapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TechHomePage(),
+                            ),
+                          );
+                        },
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      CustomCard(
+                        cardName: "Other",
+                        cardIcon: Icons.view_list,
+                        cardTapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => OtherHomePage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CustomCard(
-                      cardName: "Automotive",
-                      cardIcon: Icons.directions_car,
-                      cardTapped: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CarHomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                    SizedBox(
-                      width: 46,
-                    ),
-                    CustomCard(
-                      cardName: "Food",
-                      cardIcon: Icons.shopping_cart,
-                      cardTapped: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => FoodHomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: kDistanceBetweenCards,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CustomCard(
-                      cardName: "Internet",
-                      cardIcon: Icons.wifi,
-                      cardTapped: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => TechHomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                    SizedBox(
-                      width: 46,
-                    ),
-                    CustomCard(
-                      cardName: "Other",
-                      cardIcon: Icons.view_list,
-                      cardTapped: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OtherHomePage(),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
