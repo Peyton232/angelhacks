@@ -1,22 +1,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+const kTitleTextStyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+  fontSize: 30.0,
+);
+
+const kParagraphTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 20,
+);
+
 class TutorialSubPage extends StatelessWidget {
-  final String Title;
+  final String title;
   final Image image;
-  final String Paragraph;
+  final String paragraph;
   final List steps;
 
   TutorialSubPage({
-    @required this.Title,
+    @required this.title,
     this.image,
-    this.Paragraph,
+    this.paragraph,
     this.steps,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -26,59 +38,63 @@ class TutorialSubPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Container(
+              color: Colors.grey,
+              height: 300.0,
+              width: 100.0,
+            ),
             //image,
             Container(
-              height: 130.0,
+              //height: 50.0,
               //color: kLimeColor,
               child: Padding(
-                padding: EdgeInsets.only(
-                  left: 50.0,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 50.0,
+                  vertical: 30.0,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      '$Title',
-                      //style: kSubPageRecipeNameTextStyle,
+                      '$title',
+                      style: kTitleTextStyle,
+                      maxLines: 2,
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                     Text(
-                      '$Paragraph',
-                      //style: kSubPageRecipeSubTextStyle,
-                    ),
-                    Row(
-                      children: <Widget>[
-                      ],
+                      '$paragraph',
+                      style: kParagraphTextStyle,
+                      maxLines: 10,
                     ),
                   ],
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20.0,
-                top: 20.0,
-              ),
-              height: 300.0,
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20.0,
-                top: 20.0,
-              ),
-              height: 300.0,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Text(
-                    'Steps',
-                    //style: kCategoryLabelTextStyle,
-                    textAlign: TextAlign.left,
-                  ),
-                  for(var item in steps ) Text(item + "\n"),
-                ],
-              ),
-            ),
+            // Container(
+            //   margin: EdgeInsets.only(
+            //     left: 50.0,
+            //     top: 30.0,
+            //   ),
+            //   height: 300.0,
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.stretch,
+            //     children: <Widget>[
+            //       Text(
+            //         'Steps',
+            //         style: kParagraphTextStyle,
+            //         textAlign: TextAlign.left,
+            //       ),
+            //       // for (var item in steps)
+            //       //   Text(
+            //       //     item + "\n",
+            //       //     style: kParagraphTextStyle,
+            //       //   ),
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),
