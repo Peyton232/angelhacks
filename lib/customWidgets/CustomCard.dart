@@ -28,7 +28,7 @@ class CustomCard extends StatelessWidget {
             height: kCardDimensions,
             width: kCardDimensions,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.25),
+              color: kCardColor,
               borderRadius: BorderRadius.circular(15.0),
               // border: Border.all(
               //   width: 1.5,

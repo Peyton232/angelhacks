@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kCardColor = Color(0xff9e9e9e);
+Color kCardColor = Colors.grey.withOpacity(0.40);
 const kCardDimensions = 150.0;
 const kAppBarTextStyle = TextStyle(fontSize: 25.0);
 const kHouseDimensions = 580.0;
@@ -9,4 +9,4 @@ const kCardTextStyle = TextStyle(
   color: Colors.white,
   fontSize: 17,
 );
-const kBlurAmount = 7.0;
+const kBlurAmount = 3.0;
