@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -78,7 +77,7 @@ class WelcomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => homeHomepage(),
+                              builder: (context) => HomeHomePage(),
                             ),
                           );
                         },
@@ -162,7 +161,7 @@ class WelcomePage extends StatelessWidget {
                       ),
                       CustomCard(
                         cardName: "Other",
-                        cardIcon: Icons.view_list,
+                        cardIcon: Icons.face,
                         cardTapped: () {
                           Navigator.push(
                             context,

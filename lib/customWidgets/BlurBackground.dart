@@ -8,8 +8,8 @@ class BlurBackground extends StatelessWidget {
     return BackdropFilter(
       //Background blur of the whole screen
       filter: ImageFilter.blur(
-        sigmaY: kBlurAmount,
-        sigmaX: kBlurAmount,
+        sigmaY: kBackgroundBlurAmount,
+        sigmaX: kBackgroundBlurAmount,
       ),
       child: Container(
         height: 950.0,

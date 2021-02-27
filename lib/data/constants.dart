@@ -9,4 +9,5 @@ const kCardTextStyle = TextStyle(
   color: Colors.white,
   fontSize: 17,
 );
-const kBlurAmount = 3.0;
+const kBackgroundBlurAmount = 2.0;
+const kCardBlurAmount = 7.0;
