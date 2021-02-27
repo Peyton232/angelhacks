@@ -5,6 +5,7 @@ import 'pages/foodPages/foodHomePage.dart';
 import 'pages/homePages/homeHomePage.dart';
 import 'pages/otherPages/otherHomePage.dart';
 import 'pages/techPages/techHomePage.dart';
+import 'pages/suggestion.dart';
 
 void main() {
   runApp(new MaterialApp(
