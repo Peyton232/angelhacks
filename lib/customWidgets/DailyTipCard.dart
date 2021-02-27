@@ -21,7 +21,7 @@ class _DailyTipCardState extends State<DailyTipCard> {
           height: kCardDimensions,
           width: 350,
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.25),
+            color: kCardColor,
             borderRadius: BorderRadius.circular(15.0),
             // border: Border.all(
             //   width: 1.5,

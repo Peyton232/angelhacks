@@ -9,6 +9,7 @@ import '../pages/techPages/techHomePage.dart';
 import 'package:angelhacks/data/constants.dart';
 import 'package:angelhacks/customWidgets/CustomCard.dart';
 import 'package:angelhacks/customWidgets/DailyTipCard.dart';
+import 'package:angelhacks/customWidgets/BlurBackground.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -47,20 +48,13 @@ class WelcomePage extends StatelessWidget {
             bottom: -45,
             height: kHouseDimensions,
             width: kHouseDimensions,
-            child: Image.asset("images/homeIcon.png"),
-          ),
-          BackdropFilter(
-            //Background blur of the whole screen
-            filter: ImageFilter.blur(
-              sigmaY: kBlurAmount,
-              sigmaX: kBlurAmount,
-            ),
-            child: Container(
-              height: 10000,
-              width: 430.0,
-              color: Colors.black.withOpacity(0.4),
+            child: Icon(
+              Icons.directions_run,
+              size: 500,
+              color: Colors.green,
             ),
           ),
+          BlurBackground(),
           SingleChildScrollView(
             child: Column(
               children: <Widget>[
