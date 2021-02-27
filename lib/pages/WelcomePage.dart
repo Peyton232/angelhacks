@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -7,25 +6,36 @@ import '../pages/foodPages/foodHomePage.dart';
 import '../pages/homePages/homeHomePage.dart';
 import '../pages/otherPages/otherHomePage.dart';
 import '../pages/techPages/techHomePage.dart';
-
-const kCardColor = Color(0xff9e9e9e);
-const kCardDimensions = 150.0;
-const kAppBarTextStyle = TextStyle(fontSize: 25.0);
-const kHomeBackgroundDimensions = 450.0;
+import 'package:angelhacks/data/constants.dart';
+import 'package:angelhacks/customWidgets/CustomCard.dart';
+import 'package:angelhacks/customWidgets/DailyTipCard.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: Icon(
-          //TODO: Make into a button
-          Icons.dehaze,
-          color: Colors.white,
+        elevation: 0.0,
+        leading: Padding(
+          padding: EdgeInsets.only(
+            left: 30.0,
+          ),
+          child: GestureDetector(
+            onTap: () {
+              print("Settings has been tapped");
+            },
+            child: Icon(
+              //TODO: Make into a button
+              Icons.dehaze,
+              color: Colors.white,
+              size: 30.0,
+            ),
+          ),
         ),
         backgroundColor: Colors.transparent,
         title: Text(
-          "Adulting",
+          "Life Skills",
           style: kAppBarTextStyle,
         ),
       ),
@@ -34,16 +44,34 @@ class WelcomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             left: -150,
-            //bottom: 0.0,
-            height: kHomeBackgroundDimensions,
-            width: kHomeBackgroundDimensions,
+            bottom: -45.0,
+            height: kHouseDimensions,
+            width: kHouseDimensions,
             child: Image.asset("images/homeIcon.png"),
+          ),
+          BackdropFilter(
+            //Background blur of the whole screen
+            filter: ImageFilter.blur(
+              sigmaY: kBlurAmount,
+              sigmaX: kBlurAmount,
+            ),
+            child: Container(
+              height: 950.0,
+              width: 430.0,
+              color: Colors.black.withOpacity(0.4),
+            ),
           ),
           Column(
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(
-                  top: 30.0,
+                  top: 130.0,
+                ),
+                child: DailyTipCard(),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: kDistanceBetweenCards,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -51,13 +79,103 @@ class WelcomePage extends StatelessWidget {
                     CustomCard(
                       cardName: "Home",
                       cardIcon: Icons.home,
+                      cardTapped: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeHomePage(),
+                          ),
+                        );
+                      },
                     ),
                     SizedBox(
-                      width: 30,
+                      width: 46,
                     ),
                     CustomCard(
                       cardName: "Finance",
                       cardIcon: Icons.monetization_on,
+                      cardTapped: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FinanceHomePage(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: kDistanceBetweenCards,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CustomCard(
+                      cardName: "Automotive",
+                      cardIcon: Icons.directions_car,
+                      cardTapped: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CarHomePage(),
+                          ),
+                        );
+                      },
+                    ),
+                    SizedBox(
+                      width: 46,
+                    ),
+                    CustomCard(
+                      cardName: "Food",
+                      cardIcon: Icons.shopping_cart,
+                      cardTapped: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FoodHomePage(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: kDistanceBetweenCards,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CustomCard(
+                      cardName: "Internet",
+                      cardIcon: Icons.wifi,
+                      cardTapped: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TechHomePage(),
+                          ),
+                        );
+                      },
+                    ),
+                    SizedBox(
+                      width: 46,
+                    ),
+                    CustomCard(
+                      cardName: "Other",
+                      cardIcon: Icons.view_list,
+                      cardTapped: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => OtherHomePage(),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -65,50 +183,6 @@ class WelcomePage extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CustomCard extends StatelessWidget {
-  final String cardName;
-  final IconData cardIcon;
-
-  CustomCard({
-    this.cardIcon,
-    @required this.cardName,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(15.0),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(
-          sigmaX: 10,
-          sigmaY: 10,
-        ),
-        child: Container(
-          height: kCardDimensions,
-          width: kCardDimensions,
-          decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(15.0),
-              border: Border.all(
-                width: 1.5,
-                color: Colors.white.withOpacity(0.2),
-              )),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                cardIcon,
-                size: 80.0,
-              ),
-              Text(cardName),
-            ],
-          ),
-        ),
       ),
     );
   }
