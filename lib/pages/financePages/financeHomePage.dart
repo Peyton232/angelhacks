@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'creditcardPage.dart';
 
 class FinanceHomePage extends StatelessWidget {
   @override
@@ -13,9 +14,10 @@ class FinanceHomePage extends StatelessWidget {
             children: <Widget>[
               Center(
                   child: FlatButton(
-                    child: Text('Navigate to Page One'),
+                    child: Text('Navigate to Credit Card'),
                     onPressed: () {
-                      // Navigation code here
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => CreditCardPage()));
                     },
                   ))
             ],
