@@ -1,5 +1,7 @@
 import 'package:angelhacks/pages/WelcomePage.dart';
 import 'package:flutter/material.dart';
+
+
 import 'pages/carPages/carHomePage.dart';
 import 'pages/financePages/financeHomePage.dart';
 import 'pages/foodPages/foodHomePage.dart';
@@ -11,7 +13,9 @@ import 'package:angelhacks/classes/temp.dart';
 
 import 'pages/financePages/creditcardPage.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -26,4 +30,3 @@ class _State extends State<MyApp> {
     );
   }
 }
-
