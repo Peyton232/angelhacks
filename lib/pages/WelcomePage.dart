@@ -6,6 +6,7 @@ import '../pages/foodPages/foodHomePage.dart';
 import '../pages/homePages/homeHomePage.dart';
 import '../pages/otherPages/otherHomePage.dart';
 import '../pages/techPages/techHomePage.dart';
+import '../pages/settingsPage.dart';
 import 'package:angelhacks/data/constants.dart';
 import 'package:angelhacks/customWidgets/CustomCard.dart';
 import 'package:angelhacks/customWidgets/DailyTipCard.dart';
@@ -48,7 +49,13 @@ class WelcomePage extends StatelessWidget {
                     ),
                     Center(
                       child: GestureDetector(
-                        onTap: () {print("Settings print");},
+                        onTap: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SettingsScreen(),
+                          ),
+                        );},
                         child: Container(
                           padding: EdgeInsets.all(16),
                           child: Text("Settings", style: TextStyle(fontSize: 20),),
