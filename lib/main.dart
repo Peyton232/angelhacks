@@ -5,6 +5,7 @@ import 'pages/foodPages/foodHomePage.dart';
 import 'pages/homePages/homeHomePage.dart';
 import 'pages/otherPages/otherHomePage.dart';
 import 'pages/techPages/techHomePage.dart';
+import 'pages/suggestion.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -86,7 +87,7 @@ class _State extends State<MyApp> {
                 child: Text('Other'),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OtherHomePage()));
+                      MaterialPageRoute(builder: (context) => SuggestionPage()));
                 },
               ),
             ],
