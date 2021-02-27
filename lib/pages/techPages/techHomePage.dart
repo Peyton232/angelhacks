@@ -6,6 +6,7 @@ class TechHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -28,7 +29,9 @@ class TechHomePage extends StatelessWidget {
               color: Colors.orange,
             ),
           ),
-          BlurBackground(),
+          BlurBackground(
+            gradientColor: Colors.orange,
+          ),
           GestureDetector(
             onTap: () {
               print("SubCard");
@@ -50,7 +53,7 @@ class TechHomePage extends StatelessWidget {
             },
             child: Container(
               margin: EdgeInsets.only(
-                top: 20.0,
+                top: kDistanceFromAppBar,
                 left: 30.0,
                 right: 30.0,
               ),

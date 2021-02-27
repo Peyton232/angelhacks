@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
+import 'dart:ui';
 
 class TipCard extends StatelessWidget {
   final String topicTitle;
@@ -33,68 +34,77 @@ class TipCard extends StatelessWidget {
         // );
         //this should pass the info of that specific topic using the
       },
-      child: Container(
-        margin: EdgeInsets.only(
-          top: 25.0,
-          // left: 30.0,
-          // right: 30.0,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.0),
-          color: kCardColor,
-          border: Border.all(
-            width: 1,
-            color: Colors.white.withOpacity(0.2),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(
+            sigmaX: kCardBlurAmount,
+            sigmaY: kCardBlurAmount,
           ),
-        ),
-        height: 100,
-        child: Row(
-          children: <Widget>[
-            ClipRRect(
-              //Makes corner of image rounded
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15),
-                bottomLeft: Radius.circular(15),
-              ),
-              child: Container(
-                width: 120,
-                height: 150,
-                color: Colors.grey,
-                child: topicImage,
+          child: Container(
+            margin: EdgeInsets.only(
+              top: 25.0,
+              // left: 30.0,
+              // right: 30.0,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              color: kCardColor,
+              border: Border.all(
+                width: 1,
+                color: kGlassBorder,
               ),
             ),
-            Expanded(
-              flex: 4,
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: 20.0,
+            height: 100,
+            child: Row(
+              children: <Widget>[
+                ClipRRect(
+                  //Makes corner of image rounded
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    bottomLeft: Radius.circular(15),
+                  ),
+                  child: Container(
+                    width: 120,
+                    height: 100,
+                    color: Colors.grey,
+                    child: topicImage,
+                  ),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      topicTitle,
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      left: 20.0,
                     ),
-                    SizedBox(
-                      height: 5,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          topicTitle,
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          topicDescription,
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      topicDescription,
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

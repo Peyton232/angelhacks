@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:angelhacks/customWidgets/TipCard.dart';
 import 'package:angelhacks/customWidgets/temp.dart';
 
-class ListOfTipCards extends StatelessWidget {
+class ListOfAutoTipCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
