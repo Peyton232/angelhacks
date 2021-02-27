@@ -19,12 +19,12 @@ class HomeHomePage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
-            left: -150,
-            bottom: 0.0,
+            right: -150,
+            //bottom: 0.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
             child: Icon(
-              Icons.home,
+              Icons.house,
               size: 500,
               color: Colors.blue,
             ),
