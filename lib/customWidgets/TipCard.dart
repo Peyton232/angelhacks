@@ -58,7 +58,7 @@ class TipCard extends StatelessWidget {
               ),
               child: Container(
                 width: 120,
-                height: 150,
+                height: 100,
                 color: Colors.grey,
                 child: topicImage,
               ),
