@@ -16,7 +16,7 @@ class _SuggestionPage extends State<SuggestionPage> {
   bool isHTML = false;
 
   final _recipientController = TextEditingController(
-    text: 'example@example.com',
+    text: 'adultingsuggestions@gmail.com',
   );
 
   final _subjectController = TextEditingController(text: 'The subject');
