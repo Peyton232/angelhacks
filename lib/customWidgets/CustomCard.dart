@@ -21,8 +21,8 @@ class CustomCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
         child: BackdropFilter(
           filter: ImageFilter.blur(
-            sigmaX: kBlurAmount,
-            sigmaY: kBlurAmount,
+            sigmaX: kCardBlurAmount,
+            sigmaY: kCardBlurAmount,
           ),
           child: Container(
             height: kCardDimensions,

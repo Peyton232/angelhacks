@@ -14,8 +14,8 @@ class _DailyTipCardState extends State<DailyTipCard> {
       borderRadius: BorderRadius.circular(15.0),
       child: BackdropFilter(
         filter: ImageFilter.blur(
-          sigmaX: kBlurAmount,
-          sigmaY: kBlurAmount,
+          sigmaX: kBackgroundBlurAmount,
+          sigmaY: kBackgroundBlurAmount,
         ),
         child: Container(
           height: kCardDimensions,
