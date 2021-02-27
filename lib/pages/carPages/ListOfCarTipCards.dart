@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/customWidgets/TipCard.dart';
-import 'package:angelhacks/customWidgets/temp.dart';
+import 'carTopics.dart';
 
-class ListOfAutoTipCards extends StatelessWidget {
+class ListOfCarTipCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,12 +10,12 @@ class ListOfAutoTipCards extends StatelessWidget {
       child: ListView.builder(
         physics: ClampingScrollPhysics(),
         shrinkWrap: true,
-        itemCount: 4,
+        itemCount: carTopics.length,
         itemBuilder: (BuildContext context, int index) {
           return TipCard(
-            topicTitle: autoTopics[index].topicTitle,
-            //topicDescription: autoTopics[index].topicDescription,
-            topicImage: autoTopics[index].topicImage,
+            topicTitle: carTopics[index].topicTitle,
+            //topicDescription: carTopics[index].topicDescription,
+            topicImage: carTopics[index].topicImage,
           );
         },
       ),

@@ -5,12 +5,12 @@ import 'tutorialPageLayout.dart';
 
 class TipCard extends StatelessWidget {
   final String topicTitle;
-  final String topicDescription;
+  //final String topicDescription;
   final Image topicImage;
 
   TipCard({
     this.topicTitle,
-    this.topicDescription,
+    //this.topicDescription,
     this.topicImage,
   });
 
