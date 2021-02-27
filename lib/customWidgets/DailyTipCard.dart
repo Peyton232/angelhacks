@@ -23,10 +23,10 @@ class _DailyTipCardState extends State<DailyTipCard> {
           decoration: BoxDecoration(
             color: kCardColor,
             borderRadius: BorderRadius.circular(15.0),
-            // border: Border.all(
-            //   width: 1.5,
-            //   color: Colors.white.withOpacity(0.2),
-            // ),
+            border: Border.all(
+              width: 1,
+              color: Colors.white.withOpacity(0.2),
+            ),
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
