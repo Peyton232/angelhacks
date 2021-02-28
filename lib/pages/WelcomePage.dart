@@ -45,7 +45,12 @@ class WelcomePage extends StatelessWidget {
                     DrawerItems(
                       drawerName: "Settings",
                       drawerItemTapped: () {
-                        print("Settings tapped");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SettingsScreen(),
+                          ),
+                        );
                       },
                     ),
                   ],
