@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:angelhacks/data/constants.dart';
+import 'package:angelhacks/data/globalVariables.dart';
 
 class DailyTipCard extends StatefulWidget {
   @override
@@ -14,8 +15,10 @@ class _DailyTipCardState extends State<DailyTipCard> {
       borderRadius: BorderRadius.circular(15.0),
       child: BackdropFilter(
         filter: ImageFilter.blur(
+
           sigmaX: kBackgroundBlurAmount,
           sigmaY: kBackgroundBlurAmount,
+
         ),
         child: Container(
           height: kCardDimensions,
@@ -23,10 +26,12 @@ class _DailyTipCardState extends State<DailyTipCard> {
           decoration: BoxDecoration(
             color: kCardColor,
             borderRadius: BorderRadius.circular(15.0),
+
             border: Border.all(
               width: 1,
               color: Colors.white.withOpacity(0.2),
             ),
+
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -48,7 +53,7 @@ class _DailyTipCardState extends State<DailyTipCard> {
                   height: 10.0,
                 ),
                 Text(
-                  "(Put any daily tip here!)",
+                  tip.curtip,
                   //TODO: Add list of tips here
                   style: TextStyle(
                     color: Colors.white,

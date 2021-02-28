@@ -5,14 +5,18 @@ import 'dart:ui';
 class CustomCard extends StatelessWidget {
   final String cardName;
   final IconData cardIcon;
+
   final Color cardIconColor;
+
   final Function cardTapped;
 
   CustomCard({
     this.cardIcon,
     @required this.cardName,
     this.cardTapped,
+
     this.cardIconColor,
+
   });
 
   @override
@@ -23,8 +27,10 @@ class CustomCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
         child: BackdropFilter(
           filter: ImageFilter.blur(
+
             sigmaX: kCardBlurAmount,
             sigmaY: kCardBlurAmount,
+
           ),
           child: Container(
             height: kCardDimensions,
@@ -32,10 +38,12 @@ class CustomCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: kCardColor,
               borderRadius: BorderRadius.circular(15.0),
+
               border: Border.all(
                 width: 1,
                 color: kGlassBorder,
               ),
+
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +51,9 @@ class CustomCard extends StatelessWidget {
                 Icon(
                   cardIcon,
                   size: 80.0,
+
                   color: cardIconColor,
+
                 ),
                 Text(
                   cardName,

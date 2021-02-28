@@ -1,7 +1,9 @@
+
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
-import 'package:angelhacks/customWidgets/ListOfTechTipCards.dart';
+import 'ListOfTechTipCards.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
+
 
 class TechHomePage extends StatelessWidget {
   @override
@@ -39,3 +41,4 @@ class TechHomePage extends StatelessWidget {
     );
   }
 }
+

@@ -2,13 +2,16 @@
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
-import 'package:angelhacks/customWidgets/ListOfAutoTipCards.dart';
+import 'ListOfCarTipCards.dart';
+
 
 class CarHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       extendBodyBehindAppBar: true,
+
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -31,12 +34,16 @@ class CarHomePage extends StatelessWidget {
               color: Colors.red,
             ),
           ),
+
           BlurBackground(
             gradientColor: Colors.red,
           ),
-          ListOfAutoTipCards(),
+          ListOfCarTipCards(),
+
         ],
       ),
     );
   }
+
 }
+

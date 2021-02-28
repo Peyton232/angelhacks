@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_youtube/flutter_youtube.dart';
+import 'video.dart';
 
 const kTitleTextStyle = TextStyle(
   color: Colors.white,
@@ -16,13 +18,17 @@ class TutorialSubPage extends StatelessWidget {
   final String title;
   final Image image;
   final String paragraph;
+  final String videoID;
   final List steps;
+  final Image backImage;
 
   TutorialSubPage({
     @required this.title,
     this.image,
     this.paragraph,
     this.steps,
+    this.videoID,
+    this.backImage,
   });
 
   @override
@@ -36,26 +42,27 @@ class TutorialSubPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          //crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              color: Colors.grey,
-              height: 300.0,
-              width: 100.0,
-            ),
+           // Video(
+            // ID: videoID,
+            //),
             //image,
             Container(
               //height: 50.0,
               //color: kLimeColor,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: 50.0,
+                  horizontal: 20.0,
                   vertical: 30.0,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(
+                      height: 60,
+                    ),
                     Text(
                       '$title',
                       style: kTitleTextStyle,
@@ -63,6 +70,15 @@ class TutorialSubPage extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 20,
+                    ),
+                    RaisedButton(
+                      onPressed: () {
+                        FlutterYoutube.playYoutubeVideoByUrl(
+                          apiKey: "asdfuhjagvefjkhgv",
+                          videoUrl: videoID,
+                        );
+                      },
+                      child: const Text('Watch Video', style: TextStyle(fontSize: 20)),
                     ),
                     Text(
                       '$paragraph',
@@ -73,28 +89,30 @@ class TutorialSubPage extends StatelessWidget {
                 ),
               ),
             ),
-            // Container(
-            //   margin: EdgeInsets.only(
-            //     left: 50.0,
-            //     top: 30.0,
-            //   ),
-            //   height: 300.0,
-            //   child: Column(
-            //     crossAxisAlignment: CrossAxisAlignment.stretch,
-            //     children: <Widget>[
-            //       Text(
-            //         'Steps',
-            //         style: kParagraphTextStyle,
-            //         textAlign: TextAlign.left,
-            //       ),
-            //       // for (var item in steps)
-            //       //   Text(
-            //       //     item + "\n",
-            //       //     style: kParagraphTextStyle,
-            //       //   ),
-            //     ],
-            //   ),
-            // ),
+            Container(
+              margin: EdgeInsets.only(
+                left: 50.0,
+                top: 30.0,
+              ),
+              height: 300.0,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Text(
+                      'Steps\n',
+                      style: kParagraphTextStyle,
+                      textAlign: TextAlign.left,
+                    ),
+                    for (var item in steps)
+                      Text(
+                        item + "\n",
+                        style: kParagraphTextStyle,
+                      ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

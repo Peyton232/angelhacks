@@ -14,7 +14,7 @@ class ListOfAutoTipCards extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return TipCard(
             topicTitle: autoTopics[index].topicTitle,
-            topicDescription: autoTopics[index].topicDescription,
+            //topicDescription: autoTopics[index].topicDescription,
             topicImage: autoTopics[index].topicImage,
           );
         },

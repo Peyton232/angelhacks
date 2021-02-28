@@ -1,5 +1,6 @@
 import 'package:angelhacks/pages/WelcomePage.dart';
 import 'package:flutter/material.dart';
+import 'package:angelhacks/data/globalVariables.dart';
 
 
 import 'pages/carPages/carHomePage.dart';
@@ -10,12 +11,22 @@ import 'pages/otherPages/otherHomePage.dart';
 import 'pages/techPages/techHomePage.dart';
 import 'pages/suggestion.dart';
 import 'package:angelhacks/classes/temp.dart';
+import 'pages/carPages/carHomePage.dart';
+import 'pages/financePages/financeHomePage.dart';
+import 'pages/foodPages/foodHomePage.dart';
+import 'pages/homePages/homeHomePage.dart';
+import 'pages/otherPages/otherHomePage.dart';
+import 'pages/techPages/techHomePage.dart';
+import 'pages/suggestion.dart';
 
-import 'pages/financePages/creditcardPage.dart';
+import 'customWidgets/video.dart';
+
 
 void main() {
+  tip.GetIfChangedDate();
   runApp(MyApp());
 }
+
 
 class MyApp extends StatefulWidget {
   @override
@@ -29,4 +40,6 @@ class _State extends State<MyApp> {
       home: WelcomePage(),
     );
   }
+
 }
+

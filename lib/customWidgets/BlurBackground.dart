@@ -3,19 +3,23 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class BlurBackground extends StatelessWidget {
+
   final Color gradientColor;
 
   BlurBackground({
     this.gradientColor,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return BackdropFilter(
       //Background blur of the whole screen
       filter: ImageFilter.blur(
+
         sigmaY: kBackgroundBlurAmount,
         sigmaX: kBackgroundBlurAmount,
+
       ),
       child: Container(
         height: 950.0,
