@@ -190,8 +190,7 @@ class _FavTutorialSubPage extends State<FavTutorialSubPage> {
                         ),
                         child: widget.title != "Car Dashboard Symbols"
                             ? Text(
-                          '${widget.paragraph}',
-                          style: kParagraphTextStyle,
+                          ""
                         )
                             : Image.asset(
                           'images/carSymbolsCropped.jpg',
