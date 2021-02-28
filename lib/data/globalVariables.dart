@@ -1,6 +1,8 @@
 import 'package:angelhacks/classes/dailyTip.dart';
 
-DailyTip tip = new DailyTip();
+
+DailyTip tip = new DailyTip.PastTipConstru();
+//DailyTip tip = new DailyTip();
 
 class favoriteChecker {
   bool isFavorite;
