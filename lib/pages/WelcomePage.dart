@@ -17,6 +17,7 @@ import 'package:angelhacks/customWidgets/BlurBackground.dart';
 
 import 'package:angelhacks/customWidgets/DrawerItems.dart';
 
+import 'favoritePages/favoriteHomePage.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -40,13 +41,18 @@ class WelcomePage extends StatelessWidget {
                     DrawerItems(
                       drawerName: "Favorites",
                       drawerItemTapped: () {
-                        print("Favorites tapped");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FavoriteScreen(),
+                          ),
+                        );
                       },
                     ),
                     DrawerItems(
-                      drawerName: "Notifications",
+                      drawerName: "TBA",
                       drawerItemTapped: () {
-                        print("Notifications tapped");
+
                       },
                     ),
                     DrawerItems(
