@@ -49,9 +49,7 @@ class WelcomePage extends StatelessWidget {
                     ),
                     DrawerItems(
                       drawerName: "TBA",
-                      drawerItemTapped: () {
-
-                      },
+                      drawerItemTapped: () {},
                     ),
                     DrawerItems(
                       drawerName: "Settings",
@@ -96,19 +94,27 @@ class WelcomePage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
-            left: -150,
-            bottom: -35,
+            left: -180,
+            bottom: 0.0,
             height: kHouseDimensions,
             width: kHouseDimensions,
-            child: Icon(
-              Icons.directions_run,
-              size: kBackgroundIconSize,
-              color: Colors.green,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.green, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.directions_run,
+                size: kBackgroundIconSize,
+                color: Colors.white,
+              ),
             ),
           ),
-          BlurBackground(
-            gradientColor: Colors.green,
-          ),
+          // BlurBackground(
+          //   gradientColor: Colors.green,
+          // ),
           SingleChildScrollView(
             child: Column(
               children: <Widget>[

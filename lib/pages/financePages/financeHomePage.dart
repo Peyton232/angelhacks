@@ -4,14 +4,11 @@ import 'package:angelhacks/data/constants.dart';
 
 import 'ListOfFinanceTipCards.dart';
 
-
 class FinanceHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       extendBodyBehindAppBar: true,
-
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -24,24 +21,30 @@ class FinanceHomePage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
-            right: -150,
-
+            right: -190,
             bottom: 0.0,
 
             // height: kHouseDimensions,
             // width: kHouseDimensions,
-            child: Icon(
-              Icons.local_atm,
-              size: 500,
-              color: Colors.green,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.green, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.attach_money,
+                size: 550,
+                color: Colors.white,
+              ),
             ),
           ),
 
-          BlurBackground(
-            gradientColor: Colors.green,
-          ),
+          // BlurBackground(
+          //   gradientColor: Colors.green,
+          // ),
           ListOfFinanceTipCards(),
-
         ],
       ),
     );

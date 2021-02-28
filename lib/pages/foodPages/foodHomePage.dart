@@ -26,16 +26,27 @@ class FoodHomePage extends StatelessWidget {
 
             // height: kHouseDimensions,
             // width: kHouseDimensions,
-            child: Icon(
-              Icons.shopping_cart,
-              size: 500,
-              color: Colors.yellow,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.yellow, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.shopping_cart,
+                size: 450,
+                color: Colors.white,
+              ),
             ),
           ),
-          BlurBackground(
-            gradientColor: Colors.yellow,
+          // BlurBackground(
+          //   gradientColor: Colors.yellow,
+          // ),
+          Container(
+            height: 1000,
+            child: ListOfFoodTipCards(),
           ),
-          ListOfFoodTipCards(),
         ],
       ),
     );

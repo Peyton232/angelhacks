@@ -25,7 +25,7 @@ class TutorialBackgroundBlur extends StatelessWidget {
           color: Colors.black.withOpacity(0.4),
           gradient: LinearGradient(
             begin: Alignment.bottomCenter,
-            end: Alignment(0.0, 0.0),
+            end: Alignment(0.0, 0.3),
             colors: [
               gradientColor,
               Colors.black,

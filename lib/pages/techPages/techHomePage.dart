@@ -1,9 +1,7 @@
-
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
 import 'ListOfTechTipCards.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
-
 
 class TechHomePage extends StatelessWidget {
   @override
@@ -23,22 +21,29 @@ class TechHomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             right: -150,
-            bottom: 0.0,
+            bottom: -85.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
-            child: Icon(
-              Icons.wifi,
-              size: 500,
-              color: Colors.orange,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.orange, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.wifi,
+                size: 500,
+                color: Colors.white,
+              ),
             ),
           ),
-          BlurBackground(
-            gradientColor: Colors.orange,
-          ),
+          // BlurBackground(
+          //   gradientColor: Colors.orange,
+          // ),
           ListOfTechTipCards(),
         ],
       ),
     );
   }
 }
-
