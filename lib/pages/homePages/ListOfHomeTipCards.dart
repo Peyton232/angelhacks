@@ -5,9 +5,6 @@ import 'homeTopics.dart';
 
 
 class ListOfHomeTipCards extends StatelessWidget {
-
-  //int i = 0;
-
   @override
   Widget build(BuildContext context) {
     return Container(
