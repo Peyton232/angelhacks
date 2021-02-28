@@ -9,6 +9,7 @@ class TipCard extends StatelessWidget {
   final Image topicImage;
   final List stepsA;
   final String videoKey;
+  final Color topicColor;
 
   TipCard({
     this.topicTitle,
@@ -16,6 +17,7 @@ class TipCard extends StatelessWidget {
     this.topicImage,
     this.stepsA,
     this.videoKey,
+    this.topicColor,
   });
 
   @override
@@ -31,11 +33,13 @@ class TipCard extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => TutorialSubPage(
+                //Navigate to subpage
                 title: topicTitle,
-                //image: 'images/homeicon.png',
+                image: topicImage,
                 paragraph: paragraph,
                 steps: stepsA,
                 videoID: videoKey,
+                color: topicColor,
               ),
             ),
           );
@@ -91,7 +95,8 @@ class TipCard extends StatelessWidget {
                           Text(
                             topicTitle,
                             style: TextStyle(
-                              fontSize: 20.0,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18.0,
                               color: Colors.white,
                             ),
                             maxLines: 3,

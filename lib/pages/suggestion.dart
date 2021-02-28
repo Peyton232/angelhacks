@@ -10,7 +10,6 @@ class SuggestionPage extends StatefulWidget {
   _SuggestionPage createState() => _SuggestionPage();
 }
 
-
 class _SuggestionPage extends State<SuggestionPage> {
   List<String> attachments = [];
   bool isHTML = false;
@@ -19,10 +18,11 @@ class _SuggestionPage extends State<SuggestionPage> {
     text: 'adultingsuggestions@gmail.com',
   );
 
-  final _subjectController = TextEditingController(text: 'The subject');
+  final _subjectController =
+      TextEditingController(text: 'Adulting App Suggestion: ');
 
   final _bodyController = TextEditingController(
-    text: 'Mail body.',
+    text: 'Here is my suggestion: ',
   );
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -55,19 +55,17 @@ class _SuggestionPage extends State<SuggestionPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.red),
       home: Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-
+          backgroundColor: Colors.deepPurple,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
             icon: Icon(Icons.arrow_back),
           ),
-
-          title: Text('Plugin example app'),
+          title: Text('Give Us Suggestions'),
           actions: <Widget>[
             IconButton(
               onPressed: send,
@@ -116,7 +114,8 @@ class _SuggestionPage extends State<SuggestionPage> {
                 ),
               ),
               CheckboxListTile(
-                contentPadding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),
                 title: Text('HTML'),
                 onChanged: (bool value) {
                   setState(() {
@@ -129,21 +128,22 @@ class _SuggestionPage extends State<SuggestionPage> {
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: <Widget>[
-                    for (var i = 0; i < attachments.length; i++) Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: Text(
-                            attachments[i],
-                            softWrap: false,
-                            overflow: TextOverflow.fade,
+                    for (var i = 0; i < attachments.length; i++)
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(
+                              attachments[i],
+                              softWrap: false,
+                              overflow: TextOverflow.fade,
+                            ),
                           ),
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.remove_circle),
-                          onPressed: () => { _removeAttachment(i) },
-                        )
-                      ],
-                    ),
+                          IconButton(
+                            icon: Icon(Icons.remove_circle),
+                            onPressed: () => {_removeAttachment(i)},
+                          )
+                        ],
+                      ),
                     Align(
                       alignment: Alignment.centerRight,
                       child: IconButton(

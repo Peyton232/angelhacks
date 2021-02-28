@@ -16,10 +16,8 @@ class _DailyTipCardState extends State<DailyTipCard> {
       borderRadius: BorderRadius.circular(15.0),
       child: BackdropFilter(
         filter: ImageFilter.blur(
-
           sigmaX: kBackgroundBlurAmount,
           sigmaY: kBackgroundBlurAmount,
-
         ),
         child: GestureDetector(
           onTap: () {
@@ -41,7 +39,6 @@ class _DailyTipCardState extends State<DailyTipCard> {
                 width: 1,
                 color: kGlassBorder,
               ),
-
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(
@@ -59,6 +56,7 @@ class _DailyTipCardState extends State<DailyTipCard> {
                       fontSize: 20,
                     ),
                   ),
+
                   SizedBox(
                     height: 10.0,
                   ),
@@ -71,6 +69,7 @@ class _DailyTipCardState extends State<DailyTipCard> {
                   ),
                 ],
               ),
+
             ),
           ),
         )

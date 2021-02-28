@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/customWidgets/TipCard.dart';
-import 'techTopics.dart';
+import 'favoriteTopic.dart';
 
-class ListOfTechTipCards extends StatelessWidget {
+class ListOfFavoriteCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,17 +10,17 @@ class ListOfTechTipCards extends StatelessWidget {
       child: ListView.builder(
         physics: ClampingScrollPhysics(),
         shrinkWrap: true,
-        itemCount: techTopics.length,
+        itemCount: favoriteTopics.length,
         itemBuilder: (BuildContext context, int index) {
           return TipCard(
-            topicTitle: techTopics[index].topicTitle,
+            topicTitle: favoriteTopics[index].topicTitle,
             //topicDescription: techTopics[index].topicDescription,
-            topicImage: techTopics[index].topicImage,
-            topicColor: techTopics[index].topicColor,
+            topicImage: favoriteTopics[index].topicImage,
+
             //setup subpage here
-            paragraph: techTopics[index].paragraph,
-            stepsA: techTopics[index].steps,
-            videoKey: techTopics[index].video,
+            paragraph: favoriteTopics[index].paragraph,
+            stepsA: favoriteTopics[index].steps,
+            videoKey: favoriteTopics[index].video,
           );
         },
       ),

@@ -1,7 +1,5 @@
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
-
 import 'package:angelhacks/pages/foodPages/ListOfFoodTipCards.dart';
-
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
 
@@ -9,9 +7,7 @@ class FoodHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       extendBodyBehindAppBar: true,
-
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -30,18 +26,27 @@ class FoodHomePage extends StatelessWidget {
 
             // height: kHouseDimensions,
             // width: kHouseDimensions,
-            child: Icon(
-              Icons.shopping_cart,
-              size: 500,
-              color: Colors.yellow,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.yellow, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.shopping_cart,
+                size: 450,
+                color: Colors.white,
+              ),
             ),
           ),
-
-          BlurBackground(
-            gradientColor: Colors.yellow,
+          // BlurBackground(
+          //   gradientColor: Colors.yellow,
+          // ),
+          Container(
+            height: 1000,
+            child: ListOfFoodTipCards(),
           ),
-          ListOfFoodTipCards(),
-
         ],
       ),
     );

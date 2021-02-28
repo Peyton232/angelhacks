@@ -21,22 +21,32 @@ class HomeHomePage extends StatelessWidget {
         children: <Widget>[
           Positioned(
             right: -150,
-            bottom: 0.0,
+            bottom: -50.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
-            child: Icon(
-              Icons.house,
-              size: 500,
-              color: Colors.blue,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.blue, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.home,
+                size: 500,
+                color: Colors.white,
+              ),
             ),
           ),
-          BlurBackground(
-            gradientColor: Colors.blue,
+          // BlurBackground(
+          //   gradientColor: Colors.blue,
+          // ),
+          Container(
+            height: 1000,
+            child: ListOfHomeTipCards(),
           ),
-          ListOfHomeTipCards(),
         ],
       ),
     );
   }
 }
-

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -17,13 +16,13 @@ import 'package:angelhacks/customWidgets/BlurBackground.dart';
 
 import 'package:angelhacks/customWidgets/DrawerItems.dart';
 
+import 'favoritePages/favoriteHomePage.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-
       drawer: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Colors.deepPurple,
@@ -40,14 +39,17 @@ class WelcomePage extends StatelessWidget {
                     DrawerItems(
                       drawerName: "Favorites",
                       drawerItemTapped: () {
-                        print("Favorites tapped");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FavoriteScreen(),
+                          ),
+                        );
                       },
                     ),
                     DrawerItems(
-                      drawerName: "Notifications",
-                      drawerItemTapped: () {
-                        print("Notifications tapped");
-                      },
+                      drawerName: "TBA",
+                      drawerItemTapped: () {},
                     ),
                     DrawerItems(
                       drawerName: "Settings",
@@ -84,7 +86,7 @@ class WelcomePage extends StatelessWidget {
 
         backgroundColor: Colors.transparent,
         title: Text(
-          "Life Skills",
+          "Adulting 101",
           style: kAppBarTextStyle,
         ),
       ),
@@ -92,21 +94,27 @@ class WelcomePage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
-            left: -150,
-            bottom: -45,
+            left: -180,
+            bottom: 0.0,
             height: kHouseDimensions,
             width: kHouseDimensions,
-            child: Icon(
-              Icons.directions_run,
-
-              size: kBackgroundIconSize,
-              color: Colors.green,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.green, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.directions_run,
+                size: kBackgroundIconSize,
+                color: Colors.white,
+              ),
             ),
           ),
-          BlurBackground(
-            gradientColor: Colors.green,
-          ),
-
+          // BlurBackground(
+          //   gradientColor: Colors.green,
+          // ),
           SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -126,9 +134,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Home",
                         cardIcon: Icons.home,
-
                         cardIconColor: Colors.blue,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -144,9 +150,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Finance",
                         cardIcon: Icons.monetization_on,
-
                         cardIconColor: Colors.green,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -169,9 +173,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Automotive",
                         cardIcon: Icons.directions_car,
-
                         cardIconColor: Colors.red,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -187,9 +189,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Food",
                         cardIcon: Icons.shopping_cart,
-
                         cardIconColor: Colors.yellow,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -212,9 +212,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Internet",
                         cardIcon: Icons.wifi,
-
                         cardIconColor: Colors.orange,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -229,10 +227,8 @@ class WelcomePage extends StatelessWidget {
                       ),
                       CustomCard(
                         cardName: "Other",
-
                         cardIcon: Icons.face,
                         cardIconColor: Colors.deepPurple,
-
                         cardTapped: () {
                           Navigator.push(
                             context,

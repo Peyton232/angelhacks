@@ -6,24 +6,30 @@ class Topics {
   Image topicImage;
   List steps;
   String video;
+  Color topicColor;
+  bool isFavorite = false;
 
-  Topics({
-    this.topicTitle,
-    this.paragraph,
-    this.topicImage,
-    this.steps,
-    this.video,
-  });
+  Topics(
+      {this.topicTitle,
+      this.paragraph,
+      this.topicImage,
+      this.steps,
+      this.video,
+      this.topicColor});
 }
 
 final List<Topics> foodTopics = [
   Topics(
     topicTitle: "Pick Produce",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/produce.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.yellow,
+    topicImage: Image.asset(
+      "images/produce.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
-      "Fruit","1. Smell it \n\nWhen fruit is at its peak ripeness it will smell very sweet and fruity. So don’t be afraid to get up close and personal with your produce and smell it before you buy it.\nBest fruits to smell: cantaloupe, peaches, nectarines, pineapple, berries, and citrus fruits.",
+      "Fruit",
+      "1. Smell it \n\nWhen fruit is at its peak ripeness it will smell very sweet and fruity. So don’t be afraid to get up close and personal with your produce and smell it before you buy it.\nBest fruits to smell: cantaloupe, peaches, nectarines, pineapple, berries, and citrus fruits.",
       "2. Squeeze it. \n\nGently squeezing a fruit can help you decide if it’s ripe. With almost all fruit, you want them to be slightly soft but not mushy. If it’s too hard, it’s definitely not ripe enough.\nBest fruits to squeeze: lemons, limes, stone fruit, kiwis, mangos, avocados and apricots.",
       "3. Weigh it. \n\nBecause of the water content of fruit it is often true that, the heavier the fruit is the riper it is. I often will hold two of the same kind of fruit in each of my hands to compare weight. The heavier one wins. \nBest fruits to weigh: watermelons, pineapple, grapefruits, grapes, oranges, apples and pomegranates.",
       "4. Check the skin. \n\nYou want to look out for discoloration, cracks, or bruises on the skin of your fruit. A uniform, vibrant color usually indicates that the produce is ripe and ready to eat.\nBest fruits to check the skin: bananas, pears, berries, figs, and apples.",
@@ -33,13 +39,16 @@ final List<Topics> foodTopics = [
       "2. Check the color. \n\nLike with fruit, a uniform, vibrant color is optimal when buying vegetables. Hints of green can indicate that the produce is not ripe enough. Hints of brown can indicate that the produce is too ripe.\nBest veggies to check the color: asparagus, celery, cucumbers, kale, peas, tomatoes, and rhubarb.",
       "3. Check its crispness. \n\nDoes the skin feel firm to you? Does it snap if you break it? Those are great indicators that a vegetable is fresh and ripe!\nBest veggies to check the crispness: green beans, scallions, peppers, lettuce, cauliflower, broccoli, carrots, brussels sprouts, and asparagus.",
     ],
-    video: "https://www.youtube.com/watch?v=hBgzQF63_90&feature=emb_logo&ab_channel=JordanPage%2CFunCheapOrFree",
-
+    video:
+        "https://www.youtube.com/watch?v=hBgzQF63_90&feature=emb_logo&ab_channel=JordanPage%2CFunCheapOrFree",
   ),
   Topics(
     topicTitle: "Take Meat Tempuratures",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/meatTemp.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.yellow,
+    topicImage: Image.asset(
+      "images/meatTemp.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Choose a good thermometer.\n\nA bimetal thermometer is the old standard: a simple probe with a numbered dial. A digital thermometer, like an instant-read thermometer, is faster and more accurate, requiring mere seconds to take the temperature of the meat.",
@@ -50,13 +59,16 @@ final List<Topics> foodTopics = [
       "6. Check one last time. \n\nGet a final temperature read before removing the meat from the heat source.",
       "7. Clean up. \n\nAlways wash a meat thermometer after using it.",
     ],
-    video: "https://www.youtube.com/watch?v=YRQ47Ieddkk&ab_channel=meatnewsnetwork",
-
+    video:
+        "https://www.youtube.com/watch?v=YRQ47Ieddkk&ab_channel=meatnewsnetwork",
   ),
   Topics(
     topicTitle: "Sharpen a knife",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/SharpenKnife.jpeg", fit: BoxFit.fill,),
+    topicColor: Colors.yellow,
+    topicImage: Image.asset(
+      "images/SharpenKnife.jpeg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Study your knife.",
@@ -72,17 +84,23 @@ final List<Topics> foodTopics = [
   ),
   Topics(
     topicTitle: "Prep Meals",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/mealPrep.jpg", fit: BoxFit.fill,),
-    paragraph: "\n\nMeal prep recipes are the talk of the town when it comes to being healthy and proactive with your foods. Watching what you eat doesn’t have to mean skimping on flavor and your favorite dishes. It may simply mean cutting back to smaller portions.\n\nMeal prepping can help with that and also take the guessing game out of what to make for lunch or dinner on a whim. You’re less likely to make a stop at a fast food joint if you have a meal already waiting for you!",
-    steps: [
-    ],
+    topicColor: Colors.yellow,
+    topicImage: Image.asset(
+      "images/mealPrep.jpg",
+      fit: BoxFit.fill,
+    ),
+    paragraph:
+        "\n\nMeal prep recipes are the talk of the town when it comes to being healthy and proactive with your foods. Watching what you eat doesn’t have to mean skimping on flavor and your favorite dishes. It may simply mean cutting back to smaller portions.\n\nMeal prepping can help with that and also take the guessing game out of what to make for lunch or dinner on a whim. You’re less likely to make a stop at a fast food joint if you have a meal already waiting for you!",
+    steps: [],
     video: "https://www.youtube.com/watch?v=17Bagme20IM",
   ),
   Topics(
     topicTitle: "Safely Cut",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/knifeRack.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.yellow,
+    topicImage: Image.asset(
+      "images/knifeRack.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Keep your knives sharp. \n\nBut be sure to keep them out of reach of children. Dull knives can slip while you’re cutting. Also, you’re more apt to be careful with sharp knives.",
@@ -99,8 +117,11 @@ final List<Topics> foodTopics = [
   ),
   Topics(
     topicTitle: "Boil Water",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/boilwater.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.yellow,
+    topicImage: Image.asset(
+      "images/boilwater.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Put some water in a pan or pot.",

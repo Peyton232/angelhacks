@@ -16,7 +16,7 @@ class ListOfCarTipCards extends StatelessWidget {
             topicTitle: carTopics[index].topicTitle,
             //topicDescription: carTopics[index].topicDescription,
             topicImage: carTopics[index].topicImage,
-
+            topicColor: carTopics[index].topicColor,
             //setup subpage here
             paragraph: carTopics[index].paragraph,
             stepsA: carTopics[index].steps,
