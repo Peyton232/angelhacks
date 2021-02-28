@@ -26,6 +26,9 @@ final List<Topics> otherTopics = [
       "images/otherNecktie.jpg",
       fit: BoxFit.fill,
     ),
+    paragraph: " ",
+    steps: [],
+    video: "https://www.youtube.com/watch?v=9vUo410OY1Q",
   ),
   Topics(
     topicTitle: "CPR",

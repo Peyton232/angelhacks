@@ -28,6 +28,9 @@ final List<Topics> carTopics = [
       "images/dashBoard.jpeg",
       fit: BoxFit.fill,
     ),
+    paragraph: " ",
+    steps: [],
+    video: "https://www.youtube.com/watch?v=9vUo410OY1Q",
     //CUSTOM PAGE
   ),
   Topics(
