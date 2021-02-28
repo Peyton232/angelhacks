@@ -5,13 +5,17 @@ import 'tutorialPageLayout.dart';
 
 class TipCard extends StatelessWidget {
   final String topicTitle;
-  //final String topicDescription;
+  final String paragraph;
   final Image topicImage;
+  final List stepsA;
+  final String videoKey;
 
   TipCard({
     this.topicTitle,
-    //this.topicDescription,
+    this.paragraph,
     this.topicImage,
+    this.stepsA,
+    this.videoKey,
   });
 
   @override
@@ -28,11 +32,10 @@ class TipCard extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => TutorialSubPage(
-                title: "How to Change a Tire",
+                title: topicTitle,
                 //image: 'images/homeicon.png',
-                paragraph:
-                    'Hello I am a paragraph. Blah balh blah balh albah blah lbah bal hblab lab albal',
-                steps: ["1", '2', '3'],
+                paragraph: paragraph,
+                steps: stepsA,
               ),
             ),
           );

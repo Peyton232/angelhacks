@@ -49,7 +49,7 @@ class TutorialSubPage extends StatelessWidget {
               //color: kLimeColor,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: 50.0,
+                  horizontal: 20.0,
                   vertical: 30.0,
                 ),
                 child: Column(
@@ -73,28 +73,30 @@ class TutorialSubPage extends StatelessWidget {
                 ),
               ),
             ),
-            // Container(
-            //   margin: EdgeInsets.only(
-            //     left: 50.0,
-            //     top: 30.0,
-            //   ),
-            //   height: 300.0,
-            //   child: Column(
-            //     crossAxisAlignment: CrossAxisAlignment.stretch,
-            //     children: <Widget>[
-            //       Text(
-            //         'Steps',
-            //         style: kParagraphTextStyle,
-            //         textAlign: TextAlign.left,
-            //       ),
-            //       // for (var item in steps)
-            //       //   Text(
-            //       //     item + "\n",
-            //       //     style: kParagraphTextStyle,
-            //       //   ),
-            //     ],
-            //   ),
-            // ),
+            Container(
+              margin: EdgeInsets.only(
+                left: 50.0,
+                top: 30.0,
+              ),
+              height: 300.0,
+              child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Text(
+                    'Steps\n',
+                    style: kParagraphTextStyle,
+                    textAlign: TextAlign.left,
+                  ),
+                  for (var item in steps)
+                    Text(
+                      item + "\n",
+                      style: kParagraphTextStyle,
+                    ),
+                ],
+              ),
+              ),
+            ),
           ],
         ),
       ),

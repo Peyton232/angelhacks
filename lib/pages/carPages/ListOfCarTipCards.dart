@@ -16,6 +16,11 @@ class ListOfCarTipCards extends StatelessWidget {
             topicTitle: carTopics[index].topicTitle,
             //topicDescription: carTopics[index].topicDescription,
             topicImage: carTopics[index].topicImage,
+
+            //setup subpage here
+            paragraph: carTopics[index].paragraph,
+            stepsA: carTopics[index].steps,
+            videoKey: carTopics[index].video,
           );
         },
       ),
