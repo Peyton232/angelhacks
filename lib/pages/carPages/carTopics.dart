@@ -4,11 +4,17 @@ class Topics {
   String topicTitle;
   //String topicDescription;
   Image topicImage;
+  String paragraph;
+  List steps;
+  String video;
 
   Topics({
     this.topicTitle,
     //this.topicDescription,
     this.topicImage,
+    this.paragraph,
+    this.steps,
+    this.video,
   });
 }
 

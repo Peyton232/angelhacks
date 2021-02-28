@@ -33,8 +33,4 @@ final List<Topics> homeTopics = [
     topicTitle: "Check GFCI Plugs",
     //topicDescription: "Type of gas, etc",
     topicImage: Image.asset("images/gfci.jpg", fit: BoxFit.fill,),  ),
-  Topics(
-    topicTitle: "Change Light Bulb",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/lightbulb.jpg", fit: BoxFit.fill,),  ),
 ];
