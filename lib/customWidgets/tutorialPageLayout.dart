@@ -20,6 +20,7 @@ class TutorialSubPage extends StatelessWidget {
   final String paragraph;
   final String videoID;
   final List steps;
+  final Image backImage;
 
   TutorialSubPage({
     @required this.title,
@@ -27,6 +28,7 @@ class TutorialSubPage extends StatelessWidget {
     this.paragraph,
     this.steps,
     this.videoID,
+    this.backImage,
   });
 
   @override
