@@ -15,10 +15,8 @@ class _DailyTipCardState extends State<DailyTipCard> {
       borderRadius: BorderRadius.circular(15.0),
       child: BackdropFilter(
         filter: ImageFilter.blur(
-
           sigmaX: kBackgroundBlurAmount,
           sigmaY: kBackgroundBlurAmount,
-
         ),
         child: Container(
           height: kCardDimensions,
@@ -26,12 +24,10 @@ class _DailyTipCardState extends State<DailyTipCard> {
           decoration: BoxDecoration(
             color: kCardColor,
             borderRadius: BorderRadius.circular(15.0),
-
             border: Border.all(
               width: 1,
-              color: Colors.white.withOpacity(0.2),
+              color: kGlassBorder,
             ),
-
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(

@@ -95,6 +95,7 @@ class TipCard extends StatelessWidget {
                           Text(
                             topicTitle,
                             style: TextStyle(
+                              fontWeight: FontWeight.w500,
                               fontSize: 20.0,
                               color: Colors.white,
                             ),

@@ -15,7 +15,7 @@ class ListOfFoodTipCards extends StatelessWidget {
           return TipCard(
             topicTitle: foodTopics[index].topicTitle,
             topicImage: foodTopics[index].topicImage,
-
+            topicColor: foodTopics[index].topicColor,
             //setup subpage here
             paragraph: foodTopics[index].paragraph,
             stepsA: foodTopics[index].steps,
