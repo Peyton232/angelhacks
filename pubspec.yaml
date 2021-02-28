@@ -26,6 +26,8 @@ dependencies:
   flutter:
     sdk: flutter
   youtube_player_flutter: ^7.0.0+7
+  settings_ui: ^0.2.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -49,7 +51,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/homeIcon.png
+    - images/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

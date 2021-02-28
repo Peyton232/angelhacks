@@ -1,25 +1,45 @@
+
+import 'package:angelhacks/customWidgets/BlurBackground.dart';
+import 'ListOfOtherTipCards.dart';
 import 'package:flutter/material.dart';
+import 'package:angelhacks/data/constants.dart';
+
 
 class OtherHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('anything else'),
+
+      extendBodyBehindAppBar: true,
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          "Other",
+          style: kAppBarTextStyle,
         ),
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Center(
-                  child: FlatButton(
-                    child: Text('Navigate to Page One'),
-                    onPressed: () {
-                      // Navigation code here
-                    },
-                  ))
-            ],
+      ),
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            bottom: -90,
+            right: 70.0,
+            // height: kHouseDimensions,
+            // width: kHouseDimensions,
+            child: Icon(
+              Icons.face,
+              size: 500,
+              color: Colors.deepPurple,
+            ),
           ),
-        ));
+          BlurBackground(
+            gradientColor: Colors.deepPurple,
+          ),
+          ListOfOtherTipCards(),
+        ],
+      ),
+    );
   }
 }
+

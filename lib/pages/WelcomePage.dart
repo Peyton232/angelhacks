@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -6,19 +6,65 @@ import '../pages/foodPages/foodHomePage.dart';
 import '../pages/homePages/homeHomePage.dart';
 import '../pages/otherPages/otherHomePage.dart';
 import '../pages/techPages/techHomePage.dart';
+
+import '../pages/settingsPage.dart';
+
 import 'package:angelhacks/data/constants.dart';
 import 'package:angelhacks/customWidgets/CustomCard.dart';
 import 'package:angelhacks/customWidgets/DailyTipCard.dart';
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
+
+import 'package:angelhacks/customWidgets/DrawerItems.dart';
+
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
+
+      drawer: Theme(
+        data: Theme.of(context).copyWith(
+          canvasColor: Colors.deepPurple,
+        ),
+        child: Drawer(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                //color: Colors.deepPurple,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    DrawerItems(
+                      drawerName: "Favorites",
+                      drawerItemTapped: () {
+                        print("Favorites tapped");
+                      },
+                    ),
+                    DrawerItems(
+                      drawerName: "Notifications",
+                      drawerItemTapped: () {
+                        print("Notifications tapped");
+                      },
+                    ),
+                    DrawerItems(
+                      drawerName: "Settings",
+                      drawerItemTapped: () {
+                        print("Settings tapped");
+                      },
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       appBar: AppBar(
         elevation: 0.0,
-        leading: Padding(
+        /*leading: Padding(
+
           padding: EdgeInsets.only(
             left: 30.0,
           ),
@@ -26,14 +72,10 @@ class WelcomePage extends StatelessWidget {
             onTap: () {
               print("Settings has been tapped");
             },
-            child: Icon(
-              //TODO: Make into a button
-              Icons.dehaze,
-              color: Colors.white,
-              size: 30.0,
-            ),
+
           ),
-        ),
+        ),*/
+
         backgroundColor: Colors.transparent,
         title: Text(
           "Life Skills",
@@ -50,11 +92,15 @@ class WelcomePage extends StatelessWidget {
             width: kHouseDimensions,
             child: Icon(
               Icons.directions_run,
-              size: 500,
+
+              size: kBackgroundIconSize,
               color: Colors.green,
             ),
           ),
-          BlurBackground(),
+          BlurBackground(
+            gradientColor: Colors.green,
+          ),
+
           SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -74,6 +120,9 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Home",
                         cardIcon: Icons.home,
+
+                        cardIconColor: Colors.blue,
+
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -89,6 +138,9 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Finance",
                         cardIcon: Icons.monetization_on,
+
+                        cardIconColor: Colors.green,
+
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -111,6 +163,9 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Automotive",
                         cardIcon: Icons.directions_car,
+
+                        cardIconColor: Colors.red,
+
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -126,6 +181,9 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Food",
                         cardIcon: Icons.shopping_cart,
+
+                        cardIconColor: Colors.yellow,
+
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -148,6 +206,9 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Internet",
                         cardIcon: Icons.wifi,
+
+                        cardIconColor: Colors.orange,
+
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -162,7 +223,10 @@ class WelcomePage extends StatelessWidget {
                       ),
                       CustomCard(
                         cardName: "Other",
-                        cardIcon: Icons.view_list,
+
+                        cardIcon: Icons.face,
+                        cardIconColor: Colors.deepPurple,
+
                         cardTapped: () {
                           Navigator.push(
                             context,
