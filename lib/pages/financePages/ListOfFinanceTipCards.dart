@@ -16,6 +16,11 @@ class ListOfFinanceTipCards extends StatelessWidget {
             topicTitle: financeTopics[index].topicTitle,
             //topicDescription: financeTopics[index].topicDescription,
             topicImage: financeTopics[index].topicImage,
+
+            //setup subpage here
+            paragraph: financeTopics[index].paragraph,
+            stepsA: financeTopics[index].steps,
+            videoKey: financeTopics[index].video,
           );
         },
       ),
