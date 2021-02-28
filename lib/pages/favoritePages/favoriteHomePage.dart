@@ -6,14 +6,11 @@ import 'ListOfFavoriteCards.dart';
 
 //import 'ListOfFinanceTipCards.dart';
 
-
 class FavoriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       extendBodyBehindAppBar: true,
-
       backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
@@ -26,24 +23,31 @@ class FavoriteScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
-            right: -150,
-
-            bottom: 0.0,
-
+            left: -100,
+            bottom: -10.0,
             // height: kHouseDimensions,
             // width: kHouseDimensions,
-            child: Icon(
-              Icons.favorite_border,
-              size: 500,
-              color: Colors.pink,
+            child: ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.pink, Colors.black],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: Icon(
+                Icons.favorite,
+                size: 500,
+                color: Colors.white,
+              ),
             ),
           ),
-
-          BlurBackground(
-            gradientColor: Colors.pink,
+          // BlurBackground(
+          //   gradientColor: Colors.pink,
+          // ),
+          Container(
+            height: 1000,
+            child: ListOfFavoriteCards(),
           ),
-          ListOfFavoriteCards(),
-
         ],
       ),
     );
