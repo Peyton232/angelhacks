@@ -30,9 +30,8 @@ class _DailyTipCardState extends State<DailyTipCard> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 15.0,
-              horizontal: 15.0,
+            padding: EdgeInsets.all(
+              20.0,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -51,9 +50,8 @@ class _DailyTipCardState extends State<DailyTipCard> {
                 Text(
                   tip.curtip,
                   //TODO: Add list of tips here
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  maxLines: 4,
                 ),
               ],
             ),

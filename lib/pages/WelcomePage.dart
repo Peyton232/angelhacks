@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -24,7 +23,6 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-
       drawer: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Colors.deepPurple,
@@ -104,7 +102,6 @@ class WelcomePage extends StatelessWidget {
             width: kHouseDimensions,
             child: Icon(
               Icons.directions_run,
-
               size: kBackgroundIconSize,
               color: Colors.green,
             ),
@@ -112,7 +109,6 @@ class WelcomePage extends StatelessWidget {
           BlurBackground(
             gradientColor: Colors.green,
           ),
-
           SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -132,9 +128,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Home",
                         cardIcon: Icons.home,
-
                         cardIconColor: Colors.blue,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -150,9 +144,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Finance",
                         cardIcon: Icons.monetization_on,
-
                         cardIconColor: Colors.green,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -175,9 +167,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Automotive",
                         cardIcon: Icons.directions_car,
-
                         cardIconColor: Colors.red,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -193,9 +183,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Food",
                         cardIcon: Icons.shopping_cart,
-
                         cardIconColor: Colors.yellow,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -218,9 +206,7 @@ class WelcomePage extends StatelessWidget {
                       CustomCard(
                         cardName: "Internet",
                         cardIcon: Icons.wifi,
-
                         cardIconColor: Colors.orange,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
@@ -235,10 +221,8 @@ class WelcomePage extends StatelessWidget {
                       ),
                       CustomCard(
                         cardName: "Other",
-
                         cardIcon: Icons.face,
                         cardIconColor: Colors.deepPurple,
-
                         cardTapped: () {
                           Navigator.push(
                             context,
