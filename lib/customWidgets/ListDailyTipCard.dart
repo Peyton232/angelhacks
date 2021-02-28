@@ -1,35 +1,29 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'dart:core';
 import 'package:angelhacks/data/constants.dart';
 import 'package:angelhacks/data/globalVariables.dart';
 import 'package:angelhacks/pages/dailyTipPage.dart';
 
-class DailyTipCard extends StatefulWidget {
-  @override
-  _DailyTipCardState createState() => _DailyTipCardState();
-}
+class ListDailyTipCard extends StatelessWidget {
+  final String data;
 
-class _DailyTipCardState extends State<DailyTipCard> {
+  ListDailyTipCard({
+    this.data,
+});
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(15.0),
       child: BackdropFilter(
         filter: ImageFilter.blur(
+
           sigmaX: kBackgroundBlurAmount,
           sigmaY: kBackgroundBlurAmount,
+
         ),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => DailyTipPage(),
-              ),
-            );
-          },
           child: Container(
-            height: kCardDimensions,
+            //height: kCardDimensions,
             width: 350,
             decoration: BoxDecoration(
               color: kCardColor,
@@ -39,6 +33,7 @@ class _DailyTipCardState extends State<DailyTipCard> {
                 width: 1,
                 color: kGlassBorder,
               ),
+
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(
@@ -56,24 +51,20 @@ class _DailyTipCardState extends State<DailyTipCard> {
                       fontSize: 20,
                     ),
                   ),
-
                   SizedBox(
                     height: 10.0,
                   ),
                   Text(
-                    tip.curtip,
-                    //TODO: Add list of tips here
+                    "${data}",
                     style: TextStyle(
                       color: Colors.white,
                     ),
                   ),
                 ],
               ),
-
             ),
           ),
         )
-      ),
     );
   }
 }
