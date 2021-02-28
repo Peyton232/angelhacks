@@ -46,7 +46,6 @@ class TipCard extends StatelessWidget {
               ),
             ),
           );
-          //this should pass the info of that specific topic using the
         },
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15),
