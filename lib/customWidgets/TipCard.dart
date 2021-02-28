@@ -36,6 +36,7 @@ class TipCard extends StatelessWidget {
                 //image: 'images/homeicon.png',
                 paragraph: paragraph,
                 steps: stepsA,
+                videoID: videoKey,
               ),
             ),
           );

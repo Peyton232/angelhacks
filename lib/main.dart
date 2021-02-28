@@ -11,7 +11,7 @@ import 'pages/techPages/techHomePage.dart';
 import 'pages/suggestion.dart';
 import 'package:angelhacks/classes/temp.dart';
 
-import 'pages/financePages/creditcardPage.dart';
+import 'customWidgets/video.dart';
 
 void main() {
   runApp(MyApp());
