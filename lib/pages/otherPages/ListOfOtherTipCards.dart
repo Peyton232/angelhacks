@@ -14,8 +14,12 @@ class ListOfOtherTipCards extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return TipCard(
             topicTitle: otherTopics[index].topicTitle,
-            //topicDescription: otherTopics[index].topicDescription,
             topicImage: otherTopics[index].topicImage,
+
+            //setup subpage here
+            paragraph: otherTopics[index].paragraph,
+            stepsA: otherTopics[index].steps,
+            videoKey: otherTopics[index].video,
           );
         },
       ),
