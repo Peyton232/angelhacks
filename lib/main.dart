@@ -1,5 +1,6 @@
 import 'package:angelhacks/pages/WelcomePage.dart';
 import 'package:flutter/material.dart';
+import 'package:angelhacks/data/globalVariables.dart';
 
 
 import 'pages/carPages/carHomePage.dart';
@@ -22,6 +23,7 @@ import 'pages/financePages/creditcardPage.dart';
 
 
 void main() {
+  tip.GetIfChangedDate();
   runApp(MyApp());
 }
 
