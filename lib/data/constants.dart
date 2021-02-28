@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 Color kCardColor = Colors.black54.withOpacity(0.50);
 Color kGlassBorder = Colors.white.withOpacity(0.15);
 
@@ -19,3 +18,13 @@ const kBackgroundBlurAmount = 3.0;
 const kCardBlurAmount = 7.0;
 const kDistanceFromAppBar = 130.0;
 
+const kTitleTextStyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+  fontSize: 30.0,
+);
+
+const kParagraphTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 20,
+);

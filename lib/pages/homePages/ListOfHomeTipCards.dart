@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:angelhacks/customWidgets/TipCard.dart';
 import 'homeTopics.dart';
 
-
-
 class ListOfHomeTipCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,11 +15,12 @@ class ListOfHomeTipCards extends StatelessWidget {
           return TipCard(
             topicTitle: homeTopics[index].topicTitle,
             topicImage: homeTopics[index].topicImage,
+            topicColor: homeTopics[index].topicColor,
 
             //setup subpage here
-              paragraph: homeTopics[index].paragraph,
-              stepsA: homeTopics[index].steps,
-              videoKey: homeTopics[index].video,
+            paragraph: homeTopics[index].paragraph,
+            stepsA: homeTopics[index].steps,
+            videoKey: homeTopics[index].video,
           );
         },
       ),
