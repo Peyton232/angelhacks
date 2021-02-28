@@ -6,7 +6,7 @@ Color kGlassBorder = Colors.grey.withOpacity(0.15);
 const kCardDimensions = 150.0;
 const kAppBarTextStyle = TextStyle(fontSize: 25.0);
 const kHouseDimensions = 580.0;
-const kBackgroundIconSize = 400.0;
+const kBackgroundIconSize = 600.0;
 
 const kDistanceBetweenCards = 40.0;
 const kCardTextStyle = TextStyle(

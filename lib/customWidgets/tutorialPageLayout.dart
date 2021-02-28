@@ -83,7 +83,10 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                         },
                         child: Text(
                           'Watch Video',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       GestureDetector(
@@ -114,7 +117,8 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                               //   ),
                               //  );
 
-                              favoriteTopics.removeWhere((topicTitle) => topicTitle == widget.title);
+                              favoriteTopics.removeWhere(
+                                  (topicTitle) => topicTitle == widget.title);
                             }
                             //TODO: FAVORITES functionality goes here
                             //print("heart has been selected");
