@@ -21,6 +21,7 @@ class ListOfTechTipCards extends StatelessWidget {
             paragraph: techTopics[index].paragraph,
             stepsA: techTopics[index].steps,
             videoKey: techTopics[index].video,
+
           );
         },
       ),

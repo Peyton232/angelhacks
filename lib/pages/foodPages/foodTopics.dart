@@ -7,6 +7,7 @@ class Topics {
   List steps;
   String video;
   Color topicColor;
+  bool isFavorite = false;
 
   Topics(
       {this.topicTitle,
@@ -14,7 +15,9 @@ class Topics {
       this.topicImage,
       this.steps,
       this.video,
-      this.topicColor});
+      this.topicColor,
+        this.isFavorite,
+      });
 }
 
 final List<Topics> foodTopics = [

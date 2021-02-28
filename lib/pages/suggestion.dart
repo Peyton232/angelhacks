@@ -55,6 +55,11 @@ class _SuggestionPage extends State<SuggestionPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.deepPurple,
+        //primarySwatch: Colors.black,
+      ),
+
       home: Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(

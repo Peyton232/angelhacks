@@ -9,6 +9,7 @@ class Topics {
   List steps;
   String video;
   Color topicColor;
+  bool isFavorite = false;
 
   Topics({
     this.topicTitle,
@@ -18,6 +19,7 @@ class Topics {
     this.steps,
     this.video,
     this.topicColor,
+    this.isFavorite,
   });
 }
 
@@ -37,14 +39,15 @@ final List<Topics> financeTopics = [
   ),
   Topics(
     topicTitle: "Debit Card",
-    topicColor: Colors.green,
-    topicImage: Image.asset(
-      "images/debit.jpg",
-      fit: BoxFit.fill,
-    ),
-    paragraph: " ",
-    steps: [],
-    video: "",
+    //topicDescription: "Type of gas, etc",
+    topicImage: Image.asset("images/debit.jpg", fit: BoxFit.fill,),
+    paragraph: "Debit cards look just like credit cards and can usually conduct transactions in exactly the same manner, but they provide funds in very different ways. You should not think of them as interchangeable options when reaching into your wallet. \nDebit cards are linked to your bank account, on the other hand, so you are drawing money directly from that account when you use one. Unlike credit cards, you can’t spend money you don’t have in your account (barring overdraft protection features, which will be discussed later). \nYou can use a debit card anywhere that you can use a credit card. It is up to you to decide whether you should, though.",
+    steps: [
+      "1. Look for the card that suits you best. \nBanks and credit unions want every customer/member to have a debit card, because it is more convenient and lucrative (through fees) for them.\n\nLook carefully at any fees associated with your card, which could include annual fees and transaction fees, among others. Some comparison shopping can lead you to a card with substantially lower fees, so it pays to look around.\n\nSome banks also offer rewards for debit purchases — though usually only on “swipe-and-signature” purchases, for reasons discussed later in this article — that can include things like airline miles and cash-back bonuses. Shop around for the rewards program that suits you best.",
+      "2. Keep tabs on your available funds. \nWith a credit card, you can spend up to your credit limit and worry about how to pay for it all when your statement comes due. With a debit card, you need to know how much money you have available in your linked account at all times, unless you want to risk having your transaction declined or incurring hefty overdraft charges.",
+      "3. Consider when not to use your debit card. \nAs mentioned earlier, you can use a debit card anywhere you can use a credit card. That does not mean you should use them interchangeably, however. The main concern is fraud and your potential liability.",
+    ],
+    video: "Video - https://www.youtube.com/watch?v=FbCnubxPOXU&ab_channel=ADIBTV",
   ),
   Topics(
     topicTitle: "Savings",
@@ -75,8 +78,14 @@ final List<Topics> financeTopics = [
       fit: BoxFit.fill,
     ),
     paragraph: " ",
-    steps: [],
-    video: "",
+    steps: [
+      "1. Are You Ready to Begin Investing? \n\n  a. If you are not currently ready to begin investing, set a goal of when you will be ready.\n b. Start learning about investing and what your goals are. \n c. Set up a debt payment plan that will allow you to start investing as soon as possible. The more aggressive you are in paying off your debt, the sooner you will begin investing",
+      "2. Determine How Much You Can Invest \n\n  a. It is important to determine how much you can invest initially and how much you can continue to invest monthly or annually. This budgeting will help you determine which investments are the right ones and help you set clear goals on what you want to achieve. Remember that you do not want to invest your emergency fund, since you may need to access the funds quickly. These types of investments are more for building wealth and long-term savings goals",
+      "3. Find a Financial Planner or Investment Firm \n\n  a. Your bank may have a financial planner you can use, or ask a friend for referrals. If you are comfortable investing on your own, you will need to find an investment firm that will allow you to trade online. \n  b. A financial planner can help if you are not sure what to do. \n  c. Online investment firms may cost less, but you will need to understand what you are going to invest in and how to spread the investment risk across securities. \n d. Invest time in learning how to read and understand the market.",
+      "4.Understand the Different Type of Investment Accounts and the Risk \n\n a.  Determining your risk level is where a financial planner can help you. When you are in your twenties, you can take more risks because you have time for the market to recover, but as you get older, you will need to be more conservative in your investments. \n  b. Ask questions about the investments. \n  c. Read about the different investment types, both online and in financial magazines and books. \n  d. Do your research and be comfortable and knowledgeable about your investments. ",
+      "5. Real Estate Investments \n\n  a. Real estate that generates passive income is a great investment, but you need to make sure that it can cover the costs of upkeep and other potential problems. \n  b. Talk to someone who has real estate investments before you start.\n  c. The book \"Rich Dad, Poor Dad\" is a great starting point if you are interested in investing in real estate. ",
+    ],
+    video: "https://www.youtube.com/watch?v=covxjhXsCi8&ab_channel=ProjectLifeMastery",
   ),
   Topics(
     topicTitle: "Taxes",
@@ -86,8 +95,12 @@ final List<Topics> financeTopics = [
       fit: BoxFit.fill,
     ),
     paragraph: " ",
-    steps: [],
-    video: "",
+    steps: [
+      "1. Do not do it alone!",
+      "2. Leave it to a professional software or person",
+      "3. Check out these websites to file: \n\n  a. Turbo Tax: https://turbotax.intuit.com/  \n  b. HR Block: https://www.hrblock.com/",
+    ],
+    video: "https://www.youtube.com/watch?v=NtVYBYELwJI&ab_channel=FiveMinuteFinance",
   ),
   Topics(
     topicTitle: "Budgeting",
@@ -97,19 +110,15 @@ final List<Topics> financeTopics = [
       fit: BoxFit.fill,
     ),
     paragraph: " ",
-    steps: [],
-    video: "",
-  ),
-  Topics(
-    topicTitle: "Bills",
-    topicColor: Colors.green,
-    topicImage: Image.asset(
-      "images/bills.jpg",
-      fit: BoxFit.fill,
-    ),
-    paragraph: " ",
-    steps: [],
-    video: "",
+    steps: [
+      "1. Note your net income \n\nThe first step in creating a budget is to identify the amount of money you have coming in. Keep in mind, however, that it’s easy to overestimate what you can afford if you think of your total salary as what you have to spend. Remember to subtract your deductions, such as for Social Security, taxes, 401(k) and flexible spending account allocations, when creating a budget worksheet. Your final take-home pay is called net income, and that is the number you should use when creating a budget.",
+      "2. Track your spending \n\nIt’s helpful to keep track of and categorize your spending so you know where you can make adjustments. Doing so will help you identify what you are spending the most money on and where it might be easiest to cut back.",
+      "3. Set your goals \n\nBefore you start sifting through the information you’ve tracked, make a list of all the financial goals you want to accomplish in the short-and long-term. Short-term goals should take no longer than a year to achieve. Long-term goals, such as saving for retirement or your child’s education, may take years to reach. Remember, your goals don’t have to be set in stone, but identifying your priorities before you start planning a budget will help. For example, it may be easier to cut spending if you know your short-term goal is to reduce credit card debt.",
+      "4. Make a plan \n\nUse the variable and fixed expenses you compiled to help you get a sense of what you’ll spend in the coming months. With your fixed expenses, you can predict fairly accurately how much you’ll have to budget for. Use your past spending habits as a guide when trying to predict your variable expenses. ",
+      "5. Adjust your habits if necessary \n\nOnce you’ve done all this, you have what you need to complete your budget. Having documented your income and spending, you can start to see where you have money left over or where you can cut back so that you have money to put toward your goals. ",
+      "6. Keep checking in \n\nLastly, if the numbers still aren’t adding up, you can look at adjusting your fixed expenses. Doing so will be much more difficult and require greater discipline, but on close inspection a “need” may just be a “hard to part with.” Such decisions come with big trade-offs, so make sure you carefully weigh your options.",
+    ],
+    video: "https://www.youtube.com/watch?v=tOv04yTiLqs&ab_channel=SaraMarie",
   ),
   Topics(
     topicTitle: "Retirement",
@@ -119,7 +128,17 @@ final List<Topics> financeTopics = [
       fit: BoxFit.fill,
     ),
     paragraph: " ",
-    steps: [],
-    video: "",
+    steps: [
+      "1. Start saving, keep saving, and stick to your goals \n\nIf you are already saving, whether for retirement or another goal, keep going! You know that saving is a rewarding habit.",
+      "2. Know your retirement needs \n\nRetirement is expensive. Experts estimate that you will need 70 to 90 percent of your pre-retirement income to maintain your standard of living when you stop working",
+      "3. Contribute to your employer’s retirement savings plan \n\nIf your employer offers a retirement savings plan, such as a 401(k) plan, sign up and contribute all you can. ",
+      "4. Learn about your employer’s pension plan \n\nIf your employer has a traditional pension plan, check to see if you are covered by the plan and understand how it works. Ask for an individual benefit statement to see what your benefit is worth.",
+      "5. Consider basic investment principles \n\nHow you save can be as important as how much you save. Inflation and the type of investments you make play important roles in how much you’ll have saved at retirement.",
+      "6. Don’t touch your retirement savings \n\nIf you withdraw your retirement savings now, you’ll lose principal and interest and you may lose tax benefits or have to pay withdrawal penalties.",
+      "7. Ask your employer to start a plan \n\nIf your employer doesn’t offer a retirement plan, suggest that it start one. There are a number of retirement saving plan options available.",
+      "8. Put money into an Individual Retirement Account \n\nYou can put up to \$6,000 a year into an Individual Retirement Account (IRA); you can contribute even more if you are 50 or older. You can also start with much less. IRAs also provide tax advantages.",
+      "9. Find out about your Social Security benefits \n\nSocial Security retirement benefits replace about 40 percent of a median wage earner’s income after retiring. ",
+    ],
+    video: "https://www.youtube.com/watch?v=DnyRHK8ZAXI&ab_channel=PhilTown%27sRule%231Investing",
   ),
 ];

@@ -8,6 +8,7 @@ class Topics {
   List steps;
   String video;
   Color topicColor;
+  bool isFavorite = true;
 
   Topics({
     this.topicTitle,
@@ -17,6 +18,7 @@ class Topics {
     this.steps,
     this.video,
     this.topicColor,
+    this.isFavorite,
   });
 }
 

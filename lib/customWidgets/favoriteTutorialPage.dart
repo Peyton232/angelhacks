@@ -12,7 +12,7 @@ enum Heart {
   notFavorite,
 }
 
-class TutorialSubPage extends StatefulWidget {
+class FavTutorialSubPage extends StatefulWidget {
   final String title;
   final Image image;
   final String paragraph;
@@ -22,7 +22,7 @@ class TutorialSubPage extends StatefulWidget {
   final Color color;
   final bool favorite;
 
-  TutorialSubPage({
+  FavTutorialSubPage({
     @required this.title,
     this.image,
     this.paragraph,
@@ -34,10 +34,10 @@ class TutorialSubPage extends StatefulWidget {
   });
 
   @override
-  _TutorialSubPageState createState() => _TutorialSubPageState();
+  _FavTutorialSubPage createState() => _FavTutorialSubPage();
 }
 
-class _TutorialSubPageState extends State<TutorialSubPage> {
+class _FavTutorialSubPage extends State<FavTutorialSubPage> {
   Function playVideo() {
     FlutterYoutube.playYoutubeVideoByUrl(
       apiKey: "asdfuhjagvefjkhgv", //DO NOT TOUCH
@@ -46,7 +46,7 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
   }
 
 
-  bool heartSelected = true;
+  bool heartSelected = false;
 
 
   @override
@@ -120,7 +120,7 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                               //  );
 
                               favoriteTopics.removeWhere(
-                                  (topicTitle) => topicTitle == widget.title);
+                                      (topicTitle) => topicTitle == widget.title);
                             }
                             //TODO: FAVORITES functionality goes here
                             //print("heart has been selected");
@@ -150,17 +150,17 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                     children: <Widget>[
                       Padding(
                         padding: EdgeInsets.only(
-                         //bottom: 20.0,
+                          //bottom: 20.0,
                         ),
                         child: widget.title != "Tie a Necktie" && widget.title != ""
                             ? Text(
-                                '${widget.paragraph}',
-                                style: kParagraphTextStyle,
-                              )
+                          '${widget.paragraph}',
+                          style: kParagraphTextStyle,
+                        )
                             : Image.asset(
-                                'images/four-in-hand-knot.jpg',
-                                fit: BoxFit.cover,
-                              ),
+                          'images/four-in-hand-knot.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
@@ -169,9 +169,9 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                         child: widget.title != "Tie a Necktie"
                             ? null
                             : Image.asset(
-                                'images/oriental.jpg',
-                                fit: BoxFit.cover,
-                              ),
+                          'images/oriental.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
@@ -180,9 +180,9 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                         child: widget.title != "Tie a Necktie"
                             ? null
                             : Image.asset(
-                                'images/half-windsor.jpg',
-                                fit: BoxFit.cover,
-                              ),
+                          'images/half-windsor.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
@@ -190,12 +190,12 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                         ),
                         child: widget.title != "Car Dashboard Symbols"
                             ? Text(
-                                ""
-                              )
+                          ""
+                        )
                             : Image.asset(
-                                'images/carSymbolsCropped.jpg',
-                                fit: BoxFit.cover,
-                              ),
+                          'images/carSymbolsCropped.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
@@ -203,10 +203,10 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                         ),
                         child: widget.steps.isNotEmpty
                             ? Text(
-                                'Follow these steps!',
-                                style: kTitleTextStyle,
-                                textAlign: TextAlign.left,
-                              )
+                          'Follow these steps!',
+                          style: kTitleTextStyle,
+                          textAlign: TextAlign.left,
+                        )
                             : null,
                       ),
                       for (var item in widget.steps)
