@@ -86,7 +86,7 @@ class WelcomePage extends StatelessWidget {
 
         backgroundColor: Colors.transparent,
         title: Text(
-          "Life Skills",
+          "Adulting 101",
           style: kAppBarTextStyle,
         ),
       ),
