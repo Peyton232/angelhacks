@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/customWidgets/TipCard.dart';
-import 'package:angelhacks/classes/tech.dart';
+import 'techTopics.dart';
 
 class ListOfTechTipCards extends StatelessWidget {
   @override

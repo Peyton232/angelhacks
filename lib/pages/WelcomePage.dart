@@ -8,6 +8,7 @@ import '../pages/otherPages/otherHomePage.dart';
 import '../pages/techPages/techHomePage.dart';
 
 import '../pages/settingsPage.dart';
+import 'package:angelhacks/data/globalVariables.dart';
 
 import 'package:angelhacks/data/constants.dart';
 import 'package:angelhacks/customWidgets/CustomCard.dart';
@@ -51,7 +52,12 @@ class WelcomePage extends StatelessWidget {
                     DrawerItems(
                       drawerName: "Settings",
                       drawerItemTapped: () {
-                        print("Settings tapped");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SettingsScreen(),
+                          ),
+                        );
                       },
                     ),
                   ],
