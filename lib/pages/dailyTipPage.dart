@@ -1,5 +1,6 @@
 import 'dart:core';
 import 'package:angelhacks/customWidgets/ListDailyTipCard.dart';
+import 'package:angelhacks/pages/ListOfListDailyTipCards.dart';
 import 'package:flutter/material.dart';
 import '../pages/carPages/carHomePage.dart';
 import '../pages/financePages/financeHomePage.dart';
@@ -71,15 +72,9 @@ class DailyTipPage extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 130.0,
-                  ),
-                  child: ListDailyTipCard(),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
                     top: kDistanceBetweenCards,
                   ),
-                  child: ListDailyTipCard(),
+                  child: ListOfListDailyTipCards(),
                 ),
               ],
             ),

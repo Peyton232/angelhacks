@@ -6,7 +6,7 @@ import 'package:angelhacks/data/globalVariables.dart';
 import 'package:angelhacks/pages/dailyTipPage.dart';
 
 class ListDailyTipCard extends StatelessWidget {
-  final int data;
+  final String data;
 
   ListDailyTipCard({
     this.data,
@@ -55,7 +55,7 @@ class ListDailyTipCard extends StatelessWidget {
                     height: 10.0,
                   ),
                   Text(
-                    tip.GetTip(data),
+                    "${data}",
                     style: TextStyle(
                       color: Colors.white,
                     ),

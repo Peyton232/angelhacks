@@ -5,7 +5,7 @@ import 'package:angelhacks/classes/dailyTip.dart';
 import 'package:angelhacks/data/globalVariables.dart';
 import 'dart:core';
 
-class ListOfCarTipCards extends StatelessWidget {
+class ListOfListDailyTipCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +16,7 @@ class ListOfCarTipCards extends StatelessWidget {
         itemCount: tip.tips.length,
         itemBuilder: (BuildContext context, int index) {
           return ListDailyTipCard(
-                data: index,
+                data: tip.tips.elementAt(index),
           );
         },
       ),
