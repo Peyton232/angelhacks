@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import '../data/constants.dart';
 import 'package:flutter_youtube/flutter_youtube.dart';
 import 'video.dart';
+import '../pages/favoritePages/ListOfFavoriteCards.dart';
+import '../pages/favoritePages/favoriteTopic.dart';
 
 enum Heart {
   isFavorite,
@@ -89,8 +91,30 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                           setState(() {
                             if (heartSelected) {
                               heartSelected = false;
+                              //add to favoritesList
+                              favoriteTopics.add(
+                                Topics(
+                                  topicTitle: widget.title,
+                                  topicImage: widget.image,
+                                  paragraph: widget.paragraph,
+                                  steps: widget.steps,
+                                  video: widget.videoID,
+                                ),
+                              );
                             } else {
                               heartSelected = true;
+                              //remove to favoritesList
+                              // favoriteTopics.add(
+                              //   Topics(
+                              //     topicTitle: widget.title,
+                              //     topicImage: widget.image,
+                              //     paragraph: widget.paragraph,
+                              //     steps: widget.steps,
+                              //     video: widget.videoID,
+                              //   ),
+                              //  );
+
+                              favoriteTopics.removeWhere((topicTitle) => topicTitle == widget.title);
                             }
                             //TODO: FAVORITES functionality goes here
                             //print("heart has been selected");
@@ -110,6 +134,15 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                     ],
                   ),
                 ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: 20.0,
+                  ),
+                  child: Text(
+                    '${widget.paragraph}',
+                    style: kParagraphTextStyle,
+                  ),
+                ),
                 Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: 20.0,
@@ -119,15 +152,16 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(
-                          bottom: 20.0,
-                        ),
-                        child: Text(
-                          'Follow these steps!',
-                          style: kTitleTextStyle,
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
+                          padding: EdgeInsets.only(
+                            bottom: 20.0,
+                          ),
+                          child: widget.steps != null
+                              ? Text(
+                                  'Follow these steps!',
+                                  style: kTitleTextStyle,
+                                  textAlign: TextAlign.left,
+                                )
+                              : null),
                       for (var item in widget.steps)
                         Text(
                           item + "\n",
