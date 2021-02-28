@@ -27,7 +27,6 @@ class TipCard extends StatelessWidget {
       ),
       child: GestureDetector(
         onTap: () {
-          print("SubCard");
           Navigator.push(
             context,
             MaterialPageRoute(

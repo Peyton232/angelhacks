@@ -22,7 +22,6 @@ class ListOfHomeTipCards extends StatelessWidget {
               paragraph: homeTopics[index].paragraph,
               stepsA: homeTopics[index].steps,
               videoKey: homeTopics[index].video,
-
           );
         },
       ),
