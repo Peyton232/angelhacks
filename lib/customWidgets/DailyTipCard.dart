@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:angelhacks/data/constants.dart';
+import 'package:angelhacks/data/globalVariables.dart';
 
 class DailyTipCard extends StatefulWidget {
   @override
@@ -52,7 +53,7 @@ class _DailyTipCardState extends State<DailyTipCard> {
                   height: 10.0,
                 ),
                 Text(
-                  "(Put any daily tip here!)",
+                  tip.curtip,
                   //TODO: Add list of tips here
                   style: TextStyle(
                     color: Colors.white,
