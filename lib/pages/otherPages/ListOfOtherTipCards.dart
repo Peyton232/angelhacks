@@ -15,7 +15,7 @@ class ListOfOtherTipCards extends StatelessWidget {
           return TipCard(
             topicTitle: otherTopics[index].topicTitle,
             topicImage: otherTopics[index].topicImage,
-
+            topicColor: otherTopics[index].topicColor,
             //setup subpage here
             paragraph: otherTopics[index].paragraph,
             stepsA: otherTopics[index].steps,

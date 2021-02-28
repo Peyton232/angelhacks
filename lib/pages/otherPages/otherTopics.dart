@@ -6,12 +6,14 @@ class Topics {
   Image topicImage;
   List steps;
   String video;
+  Color topicColor;
 
   Topics({
     this.topicTitle,
     this.paragraph,
     this.topicImage,
     this.steps,
+    this.topicColor,
     this.video,
   });
 }
@@ -19,13 +21,19 @@ class Topics {
 final List<Topics> otherTopics = [
   Topics(
     topicTitle: "Tie a Necktie",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/otherNecktie.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.deepPurple,
+    topicImage: Image.asset(
+      "images/otherNecktie.jpg",
+      fit: BoxFit.fill,
+    ),
   ),
   Topics(
     topicTitle: "CPR",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/otherCPR.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.deepPurple,
+    topicImage: Image.asset(
+      "images/otherCPR.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Push hard, push fast. \n\nPlace your hands, one on top of the other, in the middle of the chest. Use your body weight to help you administer compressions that are at least 2 inches deep and delivered at a rate of at least 100 compressions per minute.",
@@ -36,8 +44,11 @@ final List<Topics> otherTopics = [
   ),
   Topics(
     topicTitle: "Resume",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/otherResume.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.deepPurple,
+    topicImage: Image.asset(
+      "images/otherResume.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Craft a lead ",
@@ -52,8 +63,11 @@ final List<Topics> otherTopics = [
   ),
   Topics(
     topicTitle: "Vote",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/otherVote.jpg", fit: BoxFit.fill,),
+    topicColor: Colors.deepPurple,
+    topicImage: Image.asset(
+      "images/otherVote.jpg",
+      fit: BoxFit.fill,
+    ),
     paragraph: " ",
     steps: [
       "1. Register to vote",
