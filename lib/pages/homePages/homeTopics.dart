@@ -16,6 +16,7 @@ class Topics {
     this.steps,
     this.video,
     this.topicColor,
+    this.isFavorite,
   });
 }
 

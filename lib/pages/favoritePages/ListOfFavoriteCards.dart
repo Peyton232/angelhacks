@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:angelhacks/customWidgets/TipCard.dart';
+import 'package:angelhacks/customWidgets/favTipCard.dart';
 import 'favoriteTopic.dart';
 
 class ListOfFavoriteCards extends StatelessWidget {
@@ -12,7 +12,7 @@ class ListOfFavoriteCards extends StatelessWidget {
         shrinkWrap: true,
         itemCount: favoriteTopics.length,
         itemBuilder: (BuildContext context, int index) {
-          return TipCard(
+          return FavTipCard(
             topicTitle: favoriteTopics[index].topicTitle,
             //topicDescription: techTopics[index].topicDescription,
             topicImage: favoriteTopics[index].topicImage,
@@ -21,6 +21,7 @@ class ListOfFavoriteCards extends StatelessWidget {
             paragraph: favoriteTopics[index].paragraph,
             stepsA: favoriteTopics[index].steps,
             videoKey: favoriteTopics[index].video,
+            favorite: true,
           );
         },
       ),

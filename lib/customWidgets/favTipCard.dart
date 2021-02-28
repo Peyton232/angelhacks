@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
 import 'dart:ui';
-import 'tutorialPageLayout.dart';
+import 'favoriteTutorialPage.dart';
 
-class TipCard extends StatelessWidget {
+class FavTipCard extends StatelessWidget {
   final String topicTitle;
   final String paragraph;
   final Image topicImage;
@@ -12,7 +12,7 @@ class TipCard extends StatelessWidget {
   final Color topicColor;
   bool favorite;
 
-  TipCard({
+  FavTipCard({
     this.topicTitle,
     this.paragraph,
     this.topicImage,
@@ -34,7 +34,7 @@ class TipCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => TutorialSubPage(
+              builder: (context) => FavTutorialSubPage(
                 //Navigate to subpage
                 title: topicTitle,
                 image: topicImage,
