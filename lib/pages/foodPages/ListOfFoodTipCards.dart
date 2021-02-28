@@ -14,8 +14,12 @@ class ListOfFoodTipCards extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return TipCard(
             topicTitle: foodTopics[index].topicTitle,
-            //topicDescription: foodTopics[index].topicDescription,
             topicImage: foodTopics[index].topicImage,
+
+            //setup subpage here
+            paragraph: foodTopics[index].paragraph,
+            stepsA: foodTopics[index].steps,
+            videoKey: foodTopics[index].video,
           );
         },
       ),

@@ -76,17 +76,9 @@ final List<Topics> homeTopics = [
   Topics(
     topicTitle: "Check GFCI Plugs",
     //topicDescription: "Type of gas, etc",
-<<<<<<<<< Temporary merge branch 1
     topicImage: Image.asset("images/gfci.jpg", fit: BoxFit.fill,),
     paragraph: "If the lamp doesn’t turn off when the TEST button is pushed, the GFCI is not working properly and should be replaced immediately.\n\nIf the lamp does turn off when the TEST button is pushed, the GFCI is working properly and should be tested monthly. To restore power, press the RESET button.\n\nIf the power is not restored when the RESET button is pushed, the GFCI is not working properly and should be replaced immediately.\n\nIf the power is not restored when the RESET button is pushed, the GFCI is not working properly and should be replaced immediately.",
     steps: ["1. Plug a lamp into the GFCI.", "2. Turn on the lamp.", "3. the RESET button will pop-out."],
     video: "https://www.youtube.com/watch?v=Vkd43t2y2to",
   ),
-=========
-    topicImage: Image.asset("images/gfci.jpg", fit: BoxFit.fill,),  ),
-  Topics(
-    topicTitle: "Change Light Bulb",
-    //topicDescription: "Type of gas, etc",
-    topicImage: Image.asset("images/lightbulb.jpg", fit: BoxFit.fill,),  ),
->>>>>>>>> Temporary merge branch 2
 ];
