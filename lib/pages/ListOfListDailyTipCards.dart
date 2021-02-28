@@ -13,10 +13,10 @@ class ListOfListDailyTipCards extends StatelessWidget {
       child: ListView.builder(
         physics: ClampingScrollPhysics(),
         shrinkWrap: true,
-        itemCount: tip.tips.length,
+        itemCount: tip.pasttips.length,
         itemBuilder: (BuildContext context, int index) {
           return ListDailyTipCard(
-                data: tip.tips.elementAt(index),
+                data: index,
           );
         },
       ),
