@@ -1,12 +1,15 @@
+
 import 'package:angelhacks/customWidgets/BlurBackground.dart';
 import 'ListOfOtherTipCards.dart';
 import 'package:flutter/material.dart';
 import 'package:angelhacks/data/constants.dart';
 
+
 class OtherHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -39,3 +42,4 @@ class OtherHomePage extends StatelessWidget {
     );
   }
 }
+

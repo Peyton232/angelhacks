@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class FinanceTopics {
   String topicTitle;
   String topicDescription;
