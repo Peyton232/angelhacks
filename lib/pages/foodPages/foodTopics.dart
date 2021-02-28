@@ -15,7 +15,9 @@ class Topics {
       this.topicImage,
       this.steps,
       this.video,
-      this.topicColor});
+      this.topicColor,
+        this.isFavorite,
+      });
 }
 
 final List<Topics> foodTopics = [
