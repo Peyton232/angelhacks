@@ -4,14 +4,23 @@ PODS:
     - Flutter
   - flutter_inappwebview (0.0.1):
     - Flutter
+  - flutter_youtube (0.0.1):
+    - Flutter
+    - XCDYouTubeKit
   - image_picker (0.0.1):
     - Flutter
+  - XCDYouTubeKit (2.15.2)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_email_sender (from `.symlinks/plugins/flutter_email_sender/ios`)
   - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
+  - flutter_youtube (from `.symlinks/plugins/flutter_youtube/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
+
+SPEC REPOS:
+  trunk:
+    - XCDYouTubeKit
 
 EXTERNAL SOURCES:
   Flutter:
@@ -20,6 +29,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_email_sender/ios"
   flutter_inappwebview:
     :path: ".symlinks/plugins/flutter_inappwebview/ios"
+  flutter_youtube:
+    :path: ".symlinks/plugins/flutter_youtube/ios"
   image_picker:
     :path: ".symlinks/plugins/image_picker/ios"
 
@@ -27,7 +38,9 @@ SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_email_sender: 02d7443217d8c41483223627972bfdc09f74276b
   flutter_inappwebview: 69dfbac46157b336ffbec19ca6dfd4638c7bf189
+  flutter_youtube: 142f8d5af0a11963bdc73e13bcae6eb78db746c2
   image_picker: 9c3312491f862b28d21ecd8fdf0ee14e601b3f09
+  XCDYouTubeKit: b120aced3d8638ffb570c5450cddb5a1dac448c7
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
