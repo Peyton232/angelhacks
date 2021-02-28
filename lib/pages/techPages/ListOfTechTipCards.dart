@@ -16,7 +16,7 @@ class ListOfTechTipCards extends StatelessWidget {
             topicTitle: techTopics[index].topicTitle,
             //topicDescription: techTopics[index].topicDescription,
             topicImage: techTopics[index].topicImage,
-
+            topicColor: techTopics[index].topicColor,
             //setup subpage here
             paragraph: techTopics[index].paragraph,
             stepsA: techTopics[index].steps,
