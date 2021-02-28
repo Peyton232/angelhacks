@@ -21,6 +21,11 @@ class ListOfOtherTipCards extends StatelessWidget {
             stepsA: otherTopics[index].steps,
             videoKey: otherTopics[index].video,
           );
+          if(true){
+
+          } else {
+
+          }
         },
       ),
     );
