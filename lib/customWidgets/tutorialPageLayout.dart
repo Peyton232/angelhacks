@@ -122,11 +122,12 @@ class _TutorialSubPageState extends State<TutorialSubPage> {
                         padding: EdgeInsets.only(
                           bottom: 20.0,
                         ),
-                        child: Text(
+                        child: widget.steps != null ?
+                        Text(
                           'Follow these steps!',
                           style: kTitleTextStyle,
                           textAlign: TextAlign.left,
-                        ),
+                        ): null
                       ),
                       for (var item in widget.steps)
                         Text(
