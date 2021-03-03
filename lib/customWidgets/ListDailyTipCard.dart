@@ -6,7 +6,7 @@ import 'package:angelhacks/data/globalVariables.dart';
 import 'package:angelhacks/pages/dailyTipPage.dart';
 
 class ListDailyTipCard extends StatelessWidget {
-  final String data;
+  final int data;
 
   ListDailyTipCard({
     this.data,
@@ -44,7 +44,7 @@ class ListDailyTipCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   Text(
-                    "Daily Tip",
+                    tip.pastdates.elementAt(data),
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
@@ -55,7 +55,7 @@ class ListDailyTipCard extends StatelessWidget {
                     height: 10.0,
                   ),
                   Text(
-                    "${data}",
+                    tip.pasttips.elementAt(data),
                     style: TextStyle(
                       color: Colors.white,
                     ),

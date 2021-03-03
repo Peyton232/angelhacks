@@ -48,10 +48,6 @@ class WelcomePage extends StatelessWidget {
                       },
                     ),
                     DrawerItems(
-                      drawerName: "TBA",
-                      drawerItemTapped: () {},
-                    ),
-                    DrawerItems(
                       drawerName: "Settings",
                       drawerItemTapped: () {
                         Navigator.push(
